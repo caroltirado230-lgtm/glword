@@ -4,21 +4,21 @@ const listaSeries = [
         titulo: "Chasing Love",
         videoUrl: '<iframe allowfullscreen style="border: none; width:100%; aspect-ratio:16 / 9;" scrolling="no" frameborder="0" src="https://www.bitchute.com/embed/omhOOMuqUsgL"></iframe>', 
         // Imagen alternativa optimizada para Chasing Love
-        portada: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=500",
+        portada: "https://mydramalist.com/images/covers/327705.jpg",
         descripcion: "No te pierdas los episodios de Chasing Love. Traducción exclusiva al español traída por el equipo de Glword."
     },
     {
         titulo: "GAP: The Series",
         videoUrl: "https://ok.ru/videoembed/7135338000000", 
         // Imagen alternativa optimizada para GAP
-        portada: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=500", 
+        portada: "https://m.media-amazon.com/images/M/MV5BMjA5Njk1YTUtNzg0My00N2Y2LTkwOTMtOTk0MTI1MWRhZGE1XkEyXkFqcGc@._V1_.jpg", 
         descripcion: "Mon, una estudiante recién graduada de la universidad, comienza a trabajar en una gran empresa porque admira a Sam, la jefa de sangre azul. Sin embargo, al conocerla en persona, descubre que la realidad es muy diferente a la imagen que los medios muestran de ella."
     },
     {
         titulo: "Affair",
         videoUrl: "https://ok.ru/videoembed/7135338000000", 
         // Imagen alternativa optimizada para Affair
-        portada: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=500", 
+        portada: "https://m.media-amazon.com/images/M/MV5BMzRjNmE3NzEtYTI5My00MTdiLThkNDYtZDJlMzdiNWI3ZTk5XkEyXkFqcGc@._V1_.jpg", 
         descripcion: "Una historia de amor profundo, superación y las complejidades de las relaciones humanas en un entorno moderno."
     }
 ];
