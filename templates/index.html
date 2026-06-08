@@ -8,19 +8,29 @@
 </head>
 <body>
     <div class="container">
-        <header class="hero-banner">
-            <div class="hero-overlay">
-                <h1>Glword</h1>
-            </div>
-        </header>
+        <div id="catalogView">
+            <header class="hero-banner">
+                <div class="hero-overlay">
+                    <h1>Glword</h1>
+                </div>
+            </header>
+            <main>
+                <section class="gallery-section">
+                    <h3>Novedades</h3>
+                    <div class="catalog-grid" id="videosGrid"></div>
+                </section>
+            </main>
+        </div>
 
-        <main id="main-content">
-            <section class="gallery-section">
-                <h3>Novedades</h3>
-                <div class="catalog-grid" id="catalog-grid">
-                    </div>
-            </section>
-        </main>
+        <div id="detailsView" style="display: none;">
+            <button id="backBtn" class="btn-back">⬅ Volver al Catálogo</button>
+            <div class="movie-details-container">
+                <h2 id="serieTitle" class="detail-title"></h2>
+                <p id="serieDescription" class="detail-description"></p>
+                
+                <div id="okRuPlayerContainer" class="player-wrapper"></div>
+            </div>
+        </div>
     </div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
