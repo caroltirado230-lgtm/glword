@@ -7,11 +7,11 @@ const listaSeries = [
     capitulos: [
       {
         nombre: "Capítulo 1",
-        videoUrl: '<iframe allowfullscreen style="border: none; width:100%; aspect-ratio:16 / 9;" scrolling="no" src="https://ok.ru/videoembed/7135338000000"></iframe>'
+        videoUrl: '<iframe allowfullscreen style="border: none; width:100%; aspect-ratio:16 / 9;" scrolling="no" frameborder="0" src="https://www.bitchute.com/embed/3llY2AdfCyBS"></iframe>'
       },
       {
         nombre: "Capítulo 2",
-        videoUrl: '<iframe width="100%" height="100%" src="https://www.bitchute.com/embed/TakE5P18BWDo/" frameborder="0" allow="fullscreen"></iframe>'
+        videoUrl: '<iframe allowfullscreen style="border: none; width:100%; aspect-ratio:16 / 9;" scrolling="no" frameborder="0" src="https://www.bitchute.com/embed/TakE5P18BWDo"></iframe>'
       }
     ]
   },
@@ -22,7 +22,7 @@ const listaSeries = [
     capitulos: [
       {
         nombre: "Capítulo 1",
-        videoUrl: "https://ok.ru/videoembed/7135338000000"
+        videoUrl: "https://youtu.be/pBl9uKcZFXo?si=R-Vvdf2TJL97ydVN"
       }
     ]
   },
