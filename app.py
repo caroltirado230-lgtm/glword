@@ -1,15 +1,11 @@
-import os
-from flask import Flask, send_from_directory
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 @app.route('/')
-def index():
-    return send_from_directory(os.getcwd(), 'index.html')
-
-@app.route('/<path:path>')
-def serve_static(path):
-    return send_from_directory(os.getcwd(), path)
+def home():
+    # Esto obliga a Flask a buscar el index.html dentro de la carpeta templates
+    return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True)
