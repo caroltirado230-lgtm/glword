@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glword - Streaming GL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <div id="catalogView">
+            <div class="hero-banner">
+                <div class="hero-overlay">
+                    <h1>GLWORD SERIES</h1>
+                </div>
+            </div>
+            <section class="gallery-section">
+                <h3>Novedades</h3>
+                <div id="videosGrid" class="catalog-grid"></div>
+            </section>
+        </div>
+
+        <div id="detailsView" class="details-view" style="display: none;">
+            <button id="backBtn" class="back-btn">← Volver al Catálogo</button>
+            <div class="movie-container">
+                <h2 id="serieTitle">Título de la Serie</h2>
+                <div class="video-wrapper">
+                    <div id="okRuPlayerContainer" class="embed-container"></div>
+                </div>
+                <div class="serie-meta">
+                    <p id="serieDescription">Sinopsis de la serie</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
