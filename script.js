@@ -7,6 +7,7 @@ const listaSeries = [
         descripcion: "La historia sigue a Song, una investigadora gastronómica que, tras una aventura de una noche, descubre que su ligue es Piangrawin, la hija del presidente de su empresa."
     },
     {
+        nombre: "Capitulo 1",
         videoUrl: '<iframe allowfullscreen style="border: none; width:100%; aspect-ratio:16 / 9;" scrolling="no" frameborder="0" src="https://www.bitchute.com/embed/omhOOMuqUsgL"></iframe>', 
     },
     {
