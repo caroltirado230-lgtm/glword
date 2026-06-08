@@ -1,17 +1,17 @@
 // Base de datos local: las portadas cargan directo desde tu propia carpeta
 const listaSeries = [
     {
-        titulo: "Chasing Love - Capitulo 1",
-        videoUrl: '<iframe allowfullscreen style="border: none; width:100%; aspect-ratio:16 / 9;" scrolling="no" frameborder="0" src="https://www.bitchute.com/embed/omhOOMuqUsgL"></iframe>', 
+        titulo: "Chasing Love",
         // Imagen alternativa optimizada para Chasing Love
         portada: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=500",
         descripcion: "La historia sigue a Song, una investigadora gastronómica que, tras una aventura de una noche, descubre que su ligue es Piangrawin, la hija del presidente de su empresa."
     },
     {
-    titulo: "Chasing Love - Capítulo 2",
+        videoUrl: '<iframe allowfullscreen style="border: none; width:100%; aspect-ratio:16 / 9;" scrolling="no" frameborder="0" src="https://www.bitchute.com/embed/omhOOMuqUsgL"></iframe>', 
+    },
+    {
+    nombre: "Capítulo 2",
     videoUrl: '<iframe width="100%" height="100%" src="https://www.bitchute.com/embed/TakE5P18BWDo/" frameborder="0" allow="fullscreen"></iframe>', 
-    portada: "https://i.postimg.cc/mD36K87P/chasing-love.jpg",
-    descripcion: "Disfruta del segundo episodio de Chasing Love. Traducción exclusiva al español por Glword."
   },
     {
         titulo: "GAP: The Series",
