@@ -1,0 +1,207 @@
+/* --- Estilos Generales --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: #0f0f12;
+    color: white;
+}
+
+/* --- Encabezado / Menú --- */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #15151a;
+    border-bottom: 2px solid #e91e63;
+}
+
+.logo{
+    color: #e91e63;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#menuBtn{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* --- Menú Desplegable Flotante Mejorado --- */
+nav{
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    background: #15151a; /* Mismo tono oscuro del header */
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #e91e63; /* Borde fucsia brillante */
+    box-shadow: 0px 4px 20px rgba(233, 30, 99, 0.3); /* Sombra con brillo */
+    z-index: 100; /* Flota por encima de las portadas sin moverlas */
+    min-width: 180px;
+}
+
+nav a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    margin: 5px 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre las opciones del menú */
+nav a:hover{
+    background: #e91e63;
+    color: white;
+    transform: translateX(-5px); /* Se mueve un poquito a la izquierda con elegancia */
+}
+
+/* --- Banner de Bienvenida --- */
+.banner{
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 20px; /* Separación para que el catálogo respire */
+}
+
+.banner h1{
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+/* --- Catálogo de Tarjetas --- */
+.catalogo{
+    padding: 30px;
+}
+
+.catalogo h2 {
+    margin-bottom: 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    background: #18181d;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(233, 30, 99, 0.2); /* Brillo sutil al pasar el mouse */
+}
+
+.card img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.card h3{
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+/* --- Sección del Reproductor --- */
+.player-section{
+    padding: 40px 20px;
+    background: #131318; /* Fondo sutilmente diferente para marcar zona de video */
+    border-top: 2px solid #e91e63;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#tituloSerie {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Contenedor inteligente del Video */
+#videoContainer {
+    max-width: 850px;
+    margin: 0 auto 25px auto;
+    aspect-ratio: 16 / 9; /* Mantiene formato cine de forma automática */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 25px rgba(233, 30, 99, 0.25); /* Sombra fucsia */
+}
+
+#videoContainer iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Contenedor de botones para centrar y dar espacio */
+#capitulos {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap; 
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* --- Botones de Capítulos Modernos --- */
+.capitulo{
+    background: transparent;
+    border: 2px solid #e91e63;
+    color: #e91e63;
+    padding: 10px 22px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 25px; /* Estilo ovalado premium */
+    transition: all .3s ease;
+}
+
+.capitulo:hover{
+    background: #e91e63;
+    color: white;
+    box-shadow: 0px 0px 12px #e91e63;
+    transform: scale(1.05);
+}
+
+/* --- Refuerzo para asegurar que los enlaces parezcan botones --- */
+.botones-comunidad a.btn-comunidad {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important; /* Quita la línea azul de abajo */
+    color: white !important; /* Obliga a que la letra sea blanca y no azul */
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 30px; /* Hace el botón ovalado */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Forzar el color de fondo de Telegram */
+.botones-comunidad a.telegram {
+    background-color: #229ED9 !important;
+}
+
+/* Forzar el color de fondo de Donación */
+.botones-comunidad a.donacion {
+    background-color: #e91e63 !important;
+}
