@@ -22,7 +22,7 @@ const series = [
         capitulos: [
             {
                 nombre: "Capítulo 1",
-                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                url: "https://youtu.be/pBl9uKcZFXo?si=_khXcGvj5LHt8YlK"
             }
         ]
     },
