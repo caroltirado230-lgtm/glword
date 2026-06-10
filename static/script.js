@@ -1,7 +1,7 @@
 const series = [
     {
         titulo: "Chasing Love",
-        portada: "/static/img/chasing.jpeg", 
+        portada: "/static/chasing.jpeg", 
         descripcion: "Serie GL",
         capitulos: [
             {
@@ -16,7 +16,7 @@ const series = [
     },
     {
         titulo: "GAP",
-        portada: "/static/img/gap.jpg", 
+        portada: "/static/gap.jpg", 
         descripcion: "Serie GL",
         capitulos: [
             {
@@ -27,7 +27,7 @@ const series = [
     },
     {
         titulo: "Affair",
-        portada: "/static/img/affair.jpg", 
+        portada: "/static/affair.jpg", 
         descripcion: "Serie GL",
         capitulos: [
             {
