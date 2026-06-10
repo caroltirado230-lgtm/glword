@@ -1,18 +1,14 @@
-/* --- Importación de Tipografía Premium --- */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
-
 /* --- Estilos Generales --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif !important;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background: radial-gradient(circle at top right, #2d1b28, #0f0f12, #0f0f12);
+    background: #0f0f12;
     color: white;
-    min-height: 100vh;
 }
 
 /* --- Encabezado / Menú --- */
@@ -20,13 +16,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background: rgba(21, 21, 26, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(233, 30, 99, 0.3);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 20px;
+    background: #15151a;
+    border-bottom: 2px solid #e91e63;
+    position: relative;
 }
 
 .logo {
@@ -43,18 +36,18 @@ header {
     cursor: pointer;
 }
 
-/* --- Menú Desplegable --- */
+/* --- Menú Desplegable Flotante --- */
 nav {
     display: none;
     position: absolute;
     top: 75px;
     right: 20px;
-    background: #15151a;
+    background: #15151a; 
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #e91e63;
-    box-shadow: 0px 4px 20px rgba(233, 30, 99, 0.3);
-    z-index: 100;
+    border: 2px solid #e91e63; 
+    box-shadow: 0px 4px 20px rgba(233, 30, 99, 0.3); 
+    z-index: 100; 
     min-width: 180px;
 }
 
@@ -67,49 +60,52 @@ nav a {
     padding: 12px 15px;
     margin: 5px 0;
     font-weight: 600;
+    font-size: 0.95rem;
     border-radius: 6px;
     transition: all 0.3s ease;
 }
 
 nav a:hover {
     background: #e91e63;
-    transform: translateX(-5px);
+    color: white;
+    transform: translateX(-5px); 
 }
 
-/* --- Banner --- */
+/* --- Banner de Bienvenida --- */
 .banner {
     text-align: center;
     padding: 60px 20px;
+    margin-bottom: 20px; 
 }
 
 .banner h1 {
     color: #e91e63;
-    font-size: 3rem;
     margin-bottom: 10px;
 }
 
-/* --- Barra de Búsqueda --- */
+/* --- Barra de Búsqueda (NUEVO) --- */
+.search-container {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+}
+
 .search-bar {
-    width: 90%;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 12px;
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
     background: #15151a;
     border: 2px solid #e91e63;
     color: white;
-    border-radius: 8px;
-    display: block;
-    text-align: center;
+    border-radius: 25px;
     font-size: 1rem;
-}
-
-.search-bar:focus {
     outline: none;
-    box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
 }
 
-/* --- Catálogo (Grid Profesional) --- */
+/* --- Catálogo de Tarjetas --- */
 .catalogo { padding: 20px; }
+
+.catalogo h2 { margin-bottom: 20px; }
 
 .grid {
     display: grid;
@@ -120,30 +116,27 @@ nav a:hover {
 @media (min-width: 768px) {
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 30px;
+        gap: 20px;
         padding: 30px;
     }
 }
 
-/* --- Tarjetas (Glassmorphism) --- */
 .card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(233, 30, 99, 0.2);
-    border-radius: 16px;
+    background: #18181d;
+    border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: #e91e63;
-    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(233, 30, 99, 0.2); 
 }
 
 .card img {
     width: 100%;
-    height: 220px;
+    height: 220px; 
     object-fit: cover;
 }
 
@@ -154,59 +147,24 @@ nav a:hover {
 .card h3 { padding: 15px; font-size: 1rem; text-align: center; }
 
 /* --- Reproductor --- */
-.player-section { padding: 40px 20px; background: #131318; border-top: 1px solid #e91e63; text-align: center; }
+.player-section { padding: 40px 20px; background: #131318; border-top: 2px solid #e91e63; text-align: center; }
 
-#tituloSerie {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-    background: linear-gradient(to right, #fff, #e91e63);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+#tituloSerie { font-size: 1.5rem; margin-bottom: 20px; color: white; display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; }
 
-.btn-volver {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
+.btn-volver { background: transparent; color: white; border: 1px solid white; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-size: 0.9rem; transition: 0.3s; }
 .btn-volver:hover { background: white; color: #131318; }
 
-#videoContainer {
-    max-width: 850px;
-    margin: 0 auto 25px auto;
-    aspect-ratio: 16 / 9;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0px 4px 25px rgba(233, 30, 99, 0.25);
-    background: #000;
-}
-
+#videoContainer { max-width: 850px; margin: 0 auto 25px auto; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; box-shadow: 0px 4px 25px rgba(233, 30, 99, 0.25); background: #000; }
 #videoContainer iframe { width: 100%; height: 100%; border: none; }
 
-/* --- Botones Capítulos --- */
-.capitulo {
-    background: transparent;
-    border: 2px solid #e91e63;
-    color: #e91e63;
-    padding: 10px 22px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 25px;
-    transition: all .3s ease;
-}
+#capitulos { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; max-width: 850px; margin: 0 auto 30px auto; }
 
-.capitulo:hover, .capitulo.activo {
-    background: #e91e63;
-    color: white;
-    box-shadow: 0px 0px 15px #e91e63;
-}
+.capitulo { background: transparent; border: 2px solid #e91e63; color: #e91e63; padding: 10px 22px; font-weight: bold; font-size: 0.95rem; cursor: pointer; border-radius: 25px; transition: all .3s ease; }
+.capitulo:hover, .capitulo.activo { background: #e91e63; color: white; box-shadow: 0px 0px 12px #e91e63; transform: scale(1.05); }
 
 /* --- Footer --- */
-.footer-comunidad { text-align: center; padding: 50px 20px; background: #15151a; border-top: 1px solid #e91e63; }
+.footer-comunidad { text-align: center; padding: 50px 20px; background: #15151a; border-top: 2px solid #e91e63; margin-top: 40px; }
+.botones-comunidad { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px; }
+.botones-comunidad a.btn-comunidad { display: inline-flex !important; align-items: center; gap: 10px; text-decoration: none !important; color: white !important; padding: 12px 25px; font-weight: bold; border-radius: 30px; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); }
+.botones-comunidad a.telegram { background-color: #229ED9 !important; }
 .botones-comunidad a.donacion { background-color: #e91e63 !important; }
