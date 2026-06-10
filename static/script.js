@@ -155,3 +155,216 @@ if (grid) {
         grid.appendChild(card);
     });
 }
+
+/* --- Importación de Tipografía Premium --- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+
+/* --- Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif !important;
+}
+
+body {
+    background: radial-gradient(circle at top right, #2d1b28, #0f0f12, #0f0f12);
+    color: white;
+    min-height: 100vh;
+}
+
+/* --- Encabezado / Menú --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(21, 21, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(233, 30, 99, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #e91e63;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#menuBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* --- Menú Desplegable --- */
+nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    background: #15151a;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e91e63;
+    box-shadow: 0px 4px 20px rgba(233, 30, 99, 0.3);
+    z-index: 100;
+    min-width: 180px;
+}
+
+nav.mostrar-menu { display: block; }
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    margin: 5px 0;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #e91e63;
+    transform: translateX(-5px);
+}
+
+/* --- Banner --- */
+.banner {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner h1 {
+    color: #e91e63;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* --- Barra de Búsqueda --- */
+.search-bar {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 12px;
+    background: #15151a;
+    border: 2px solid #e91e63;
+    color: white;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.search-bar:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+}
+
+/* --- Catálogo (Grid Profesional) --- */
+.catalogo { padding: 20px; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 30px;
+        padding: 30px;
+    }
+}
+
+/* --- Tarjetas (Glassmorphism) --- */
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(233, 30, 99, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #e91e63;
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .card img { height: 320px; }
+}
+
+.card h3 { padding: 15px; font-size: 1rem; text-align: center; }
+
+/* --- Reproductor --- */
+.player-section { padding: 40px 20px; background: #131318; border-top: 1px solid #e91e63; text-align: center; }
+
+#tituloSerie {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #fff, #e91e63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-volver {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-volver:hover { background: white; color: #131318; }
+
+#videoContainer {
+    max-width: 850px;
+    margin: 0 auto 25px auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 4px 25px rgba(233, 30, 99, 0.25);
+    background: #000;
+}
+
+#videoContainer iframe { width: 100%; height: 100%; border: none; }
+
+/* --- Botones Capítulos --- */
+.capitulo {
+    background: transparent;
+    border: 2px solid #e91e63;
+    color: #e91e63;
+    padding: 10px 22px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all .3s ease;
+}
+
+.capitulo:hover, .capitulo.activo {
+    background: #e91e63;
+    color: white;
+    box-shadow: 0px 0px 15px #e91e63;
+}
+
+/* --- Footer --- */
+.footer-comunidad { text-align: center; padding: 50px 20px; background: #15151a; border-top: 1px solid #e91e63; }
+.botones-comunidad a.donacion { background-color: #e91e63 !important; }
