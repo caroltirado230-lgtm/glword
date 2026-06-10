@@ -1,109 +1,64 @@
-/* --- Estilos Generales --- */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-/* CAMBIO: De fondo negro a fondo ultra claro y limpio */
-body { background: #f8fafc; color: #334155; }
-
-/* --- Encabezado --- */
-/* CAMBIO: Fondo blanco con borde inferior gris muy suave y sombra sutil */
-header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 20px; 
-    background: #ffffff; 
-    border-bottom: 1px solid #e2e8f0; 
-    position: relative; 
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
-}
-.logo { color: #e91e63; font-size: 28px; font-weight: bold; }
-/* CAMBIO: El botón de hamburguesa ahora es gris oscuro para resaltar en el fondo blanco */
-#menuBtn { background: none; border: none; color: #334155; font-size: 28px; cursor: pointer; }
-
-/* --- Menú --- */
-/* CAMBIO: Estilo de menú flotante claro y moderno */
-nav { 
-    display: none; 
-    position: absolute; 
-    top: 75px; 
-    right: 20px; 
-    background: #ffffff; 
-    padding: 10px; 
-    border-radius: 8px; 
-    border: 1px solid #e2e8f0; 
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08); 
-    z-index: 100; 
-    min-width: 180px; 
-}
-nav.mostrar-menu { display: block; }
-nav a { display: block; color: #334155; text-decoration: none; padding: 12px 15px; font-weight: 600; border-radius: 6px; }
-nav a:hover { background: #e91e63; color: white; }
-
-/* --- Buscador --- */
-/* CAMBIO: Se parece al de tu ejemplo: fondo blanco, borde gris suave y más separación (margin) */
-.search-bar {
-    width: 90%; 
-    max-width: 500px; 
-    display: block; 
-    margin: 35px auto; /* Más espacio arriba y abajo para que no esté pegado */
-    padding: 14px 20px;
-    background: #ffffff; 
-    border: 1px solid #cbd5e1; 
-    color: #334155;
-    border-radius: 8px; /* Bordes un poco más rectos y modernos tipo el ejemplo */
-    text-align: left; /* Alineado a la izquierda como la barra del ejemplo */
-    font-size: 1rem; 
-    outline: none;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.03);
-    transition: all 0.3s ease;
-}
-.search-bar:focus {
-    border-color: #e91e63;
-    box-shadow: 0px 2px 10px rgba(233, 30, 99, 0.1);
-}
-
 /* --- Catálogo --- */
-.catalogo { padding: 20px; max-width: 1200px; margin: 0 auto; }
-.catalogo h2 { color: #1e293b; font-size: 1.4rem; margin-bottom: 25px; font-weight: 700; }
+.catalogo { 
+    padding: 40px 20px; /* Más espacio arriba y abajo del título */
+    max-width: 1000px;  /* Limitamos el ancho total para que no se pegue a los bordes de la pantalla */
+    margin: 0 auto;     /* Centra todo el catálogo en computadoras */
+}
 
-/* CAMBIO: Ajustamos el 'gap' (la separación) a 25px para que las tarjetas no estén juntas */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 25px; }
-@media (min-width: 768px) { .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 35px; } }
+.catalogo h2 { 
+    color: #1e293b; 
+    font-size: 1.4rem; 
+    margin-bottom: 30px; /* Más espacio debajo del título antes de las series */
+    font-weight: 700; 
+}
 
-/* CAMBIO: Tarjetas blancas con sombras bonitas y esquinas redondeadas */
+/* LA SOLUCIÓN AL ESPACIADO: Controlamos el tamaño en pantallas pequeñas y grandes */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+    gap: 30px; /* Espacio amplio entre tarjetas en celular */
+}
+
+/* Cuando la pantalla es grande (como tu Chromebook), fijamos un tamaño estilizado */
+@media (min-width: 768px) { 
+    .grid { 
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Tarjetas más compactas */
+        gap: 45px; /* ¡Espacio gigante de separación para que respiren las portadas! */
+    } 
+}
+
+/* Ajuste de las tarjetas individuales */
 .card { 
     background: #ffffff; 
     border-radius: 12px; 
     overflow: hidden; 
     cursor: pointer; 
     transition: all 0.3s ease; 
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); /* Sombra que da volumen */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05); 
 }
+
 .card:hover { 
-    transform: translateY(-5px); /* Se eleva un poquito en vez de agrandarse */
+    transform: translateY(-5px); 
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); 
 }
-.card img { width: 100%; height: 210px; object-fit: cover; }
-@media (min-width: 768px) { .card img { height: 310px; } }
-/* CAMBIO: Texto oscuro sobre fondo blanco de la tarjeta */
-.card h3 { padding: 15px; font-size: 1rem; text-align: center; color: #1e293b; font-weight: 600; }
 
-/* --- Player --- */
-/* CAMBIO: Se adaptó a la interfaz limpia y clara */
-.player-section { padding: 40px 20px; background: #ffffff; border-top: 1px solid #e2e8f0; text-align: center; }
-#tituloSerie { color: #1e293b; font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 15px; }
-.btn-volver { background: transparent; color: #334155; border: 1px solid #cbd5e1; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
-.btn-volver:hover { background: #f1f5f9; }
-#videoContainer { max-width: 850px; margin: 0 auto; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; background: #000; box-shadow: 0px 10px 25px rgba(0,0,0,0.1); }
-#videoContainer iframe { width: 100%; height: 100%; border: none; }
-.capitulos-grid { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
-.capitulo { background: transparent; border: 2px solid #e91e63; color: #e91e63; padding: 10px 20px; border-radius: 25px; cursor: pointer; font-weight: 600; }
-.capitulo.activo { background: #e91e63; color: white; }
+/* Evitamos que las imágenes crezcan sin control */
+.card img { 
+    width: 100%; 
+    height: 220px; /* Altura controlada en celular */
+    object-fit: cover; 
+}
 
-/* --- Footer --- */
-/* CAMBIO: Footer blanco con tonos grises elegantes */
-.footer-comunidad { text-align: center; padding: 50px 20px; background: #ffffff; border-top: 1px solid #e2e8f0; color: #334155; }
-.footer-comunidad h2 { color: #1e293b; }
-.botones-comunidad { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
-.btn-comunidad { padding: 12px 25px; border-radius: 25px; text-decoration: none; color: white; font-weight: bold; box-shadow: 0px 4px 10px rgba(0,0,0,0.05); }
-.telegram { background-color: #229ED9; }
-.donacion { background-color: #e91e63; }
+@media (min-width: 768px) { 
+    .card img { 
+        height: 280px; /* Altura perfecta y estética en la Chromebook */
+    } 
+}
+
+.card h3 { 
+    padding: 15px; 
+    font-size: 1rem; 
+    text-align: center; 
+    color: #1e293b; 
+    font-weight: 600; 
+}
