@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif !important; /* Fuente profesional */
+    font-family: 'Outfit', sans-serif !important;
 }
 
 body {
@@ -22,7 +22,7 @@ header {
     align-items: center;
     padding: 20px 40px;
     background: rgba(21, 21, 26, 0.8);
-    backdrop-filter: blur(10px); /* Efecto vidrio */
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(233, 30, 99, 0.3);
     position: sticky;
     top: 0;
@@ -86,6 +86,26 @@ nav a:hover {
     color: #e91e63;
     font-size: 3rem;
     margin-bottom: 10px;
+}
+
+/* --- Barra de Búsqueda --- */
+.search-bar {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 12px;
+    background: #15151a;
+    border: 2px solid #e91e63;
+    color: white;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.search-bar:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
 }
 
 /* --- Catálogo (Grid Profesional) --- */
