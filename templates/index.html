@@ -6,16 +6,15 @@
     <title>Glword</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <header>
     <div class="logo">GLWORD</div>
 
-    <button id="menuBtn">
-        ☰
+    <button id="menuBtn" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
     </button>
 
     <nav id="menu">
@@ -32,25 +31,21 @@
     <p>Tu plataforma para series GL.</p>
 </section>
 
-<section class="catalogo">
-
+<section class="catalogo" id="catalogoSection">
     <h2>Series Populares</h2>
-
     <div id="gridSeries" class="grid"></div>
-
 </section>
 
-<section class="player-section">
-
+<section class="player-section" id="playerSection" style="display: none;">
     <h2 id="tituloSerie"></h2>
 
-    <div id="videoContainer"></div>
+    <div id="videoContainer" class="video-wrapper"></div>
 
-    <div id="capitulos"></div>
+    <div id="capitulos" class="capitulos-grid"></div>
 
+    <div id="disqus_thread" class="comentarios-seccion"></div>
 </section>
 
-<!-- --- SECCIÓN DE REDES SOCIALES Y DONACIONES --- -->
 <footer class="footer-comunidad">
     <h2>Únete a la Comunidad de Glword</h2>
     <p>Apoya nuestras traducciones y no te pierdas ningún estreno.</p>
