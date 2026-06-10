@@ -1,281 +1,131 @@
-/* --- Estilos Generales --- */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+const series = [
+    {
+        titulo: "Chasing Love",
+        portada: "/static/chasing.jpeg", 
+        descripcion: "Serie GL",
+        capitulos: [
+            { nombre: "Capítulo 1", url: "https://www.bitchute.com/embed/omhOOMuqUsgL" },
+            { nombre: "Capítulo 2", url: "https://www.bitchute.com/embed/TakE5P18BWDo" }
+        ]
+    },
+    {
+        titulo: "GAP",
+        portada: "/static/gap.jpg", 
+        descripcion: "Serie GL",
+        capitulos: [
+            { nombre: "Capítulo 1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+        ]
+    },
+    {
+        titulo: "Affair",
+        portada: "/static/affair.jpg", 
+        descripcion: "Serie GL",
+        capitulos: [
+            { nombre: "Capítulo 1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+        ]
+    }
+];
+
+// --- Referencias al DOM ---
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+const catalogoSection = document.getElementById("catalogoSection");
+const playerSection = document.getElementById("playerSection");
+const grid = document.getElementById("gridSeries");
+
+// --- Control del Menú Móvil ---
+if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("mostrar-menu"); 
+    });
 }
 
-body{
-    background: #0f0f12;
-    color: white;
+// --- Función para incrustar el video ---
+function inyectarVideo(url, container) {
+    let videoId = "";
+    if (url.includes("v=")) {
+        videoId = url.split("v=")[1].split("&")[0];
+    } else if (url.includes("youtu.be/")) {
+        videoId = url.split("youtu.be/")[1].split("?")[0];
+    }
+    
+    const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : url;
+    container.innerHTML = `<iframe src="${embedUrl}" allowfullscreen frameborder="0"></iframe>`;
 }
 
-/* --- Encabezado / Menú --- */
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #15151a;
-    border-bottom: 2px solid #e91e63;
-    position: relative; /* Para que el menú flotante se alinee bien */
+// --- Función para Volver al Catálogo ---
+function cerrarSerie() {
+    playerSection.style.display = "none";
+    catalogoSection.style.display = "block";
+    document.getElementById("videoContainer").innerHTML = ""; 
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-.logo{
-    color: #e91e63;
-    font-size: 28px;
-    font-weight: bold;
+// --- Función para Abrir la Sección del Reproductor ---
+function abrirSerie(serie) {
+    if (catalogoSection) catalogoSection.style.display = "none";
+    if (playerSection) playerSection.style.display = "block";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const tituloElement = document.getElementById("tituloSerie");
+    tituloElement.innerHTML = `
+        <button onclick="cerrarSerie()" class="btn-volver">
+            <i class="fas fa-arrow-left"></i> Volver
+        </button> 
+        ${serie.titulo}
+    `;
+
+    const videoContainer = document.getElementById("videoContainer");
+    const capitulos = document.getElementById("capitulos");
+    capitulos.innerHTML = "";
+
+    inyectarVideo(serie.capitulos[0].url, videoContainer);
+
+    serie.capitulos.forEach((cap, index) => {
+        const btn = document.createElement("button");
+        btn.className = "capitulo";
+        if (index === 0) btn.classList.add("activo"); 
+        btn.innerText = cap.nombre;
+
+        btn.onclick = () => {
+            inyectarVideo(cap.url, videoContainer);
+            document.querySelectorAll(".capitulo").forEach(b => b.classList.remove("activo"));
+            btn.classList.add("activo");
+        };
+        capitulos.appendChild(btn);
+    });
 }
 
-#menuBtn{
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
+// --- Renderizar la Cuadrícula del Catálogo ---
+if (grid) {
+    series.forEach(serie => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <div class="card-img-container">
+                <img src="${serie.portada}" alt="Portada de ${serie.titulo}">
+            </div>
+            <h3>${serie.titulo}</h3>
+        `;
+        card.addEventListener("click", () => abrirSerie(serie));
+        grid.appendChild(card);
+    });
 }
 
-/* --- Menú Desplegable Flotante --- */
-nav{
-    display: none; /* Oculto por defecto */
-    position: absolute;
-    top: 75px;
-    right: 20px;
-    background: #15151a; 
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #e91e63; 
-    box-shadow: 0px 4px 20px rgba(233, 30, 99, 0.3); 
-    z-index: 100; 
-    min-width: 180px;
-}
-
-/* Esta clase es la que activa el JS para mostrar el menú */
-nav.mostrar-menu {
-    display: block;
-}
-
-nav a{
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 12px 15px;
-    margin: 5px 0;
-    font-weight: 600;
-    font-size: 0.95rem;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-nav a:hover{
-    background: #e91e63;
-    color: white;
-    transform: translateX(-5px); 
-}
-
-/* --- Banner de Bienvenida --- */
-.banner{
-    text-align: center;
-    padding: 60px 20px;
-    margin-bottom: 20px; 
-}
-
-.banner h1{
-    color: #e91e63;
-    margin-bottom: 10px;
-}
-
-/* --- Catálogo de Tarjetas --- */
-.catalogo{
-    padding: 20px; /* Un poco menos de padding para móviles */
-}
-
-.catalogo h2 {
-    margin-bottom: 20px;
-}
-
-/* Adaptación Mobile-First de la cuadrícula */
-.grid{
-    display: grid;
-    /* En celulares: columnas de mínimo 140px (entran 2 por pantalla) */
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 15px;
-}
-
-/* En tablets y PC: volvemos a tu tamaño original */
-@media (min-width: 768px) {
-    .grid{
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 20px;
-        padding: 30px;
-    }
-}
-
-.card{
-    background: #18181d;
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.card:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(233, 30, 99, 0.2); 
-}
-
-.card img{
-    width: 100%;
-    /* Altura más pequeña en celulares para que no se vea estirado */
-    height: 220px; 
-    object-fit: cover;
-}
-
-@media (min-width: 768px) {
-    .card img{
-        height: 320px; /* Tu altura original para PC */
-    }
-}
-
-.card h3{
-    padding: 15px;
-    font-size: 1rem;
-    text-align: center;
-}
-
-/* --- Sección del Reproductor --- */
-.player-section{
-    padding: 40px 20px;
-    background: #131318; 
-    border-top: 2px solid #e91e63;
-    text-align: center;
-    /* La margen superior se elimina porque ahora reemplaza al catálogo visualmente */
-}
-
-/* Título y Botón de volver alineados */
-#tituloSerie {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap; /* Por si el título es muy largo en celular */
-}
-
-/* Nuevo estilo para el botón de Volver */
-.btn-volver {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.btn-volver:hover {
-    background: white;
-    color: #131318;
-}
-
-/* Contenedor inteligente del Video */
-#videoContainer {
-    max-width: 850px;
-    margin: 0 auto 25px auto;
-    aspect-ratio: 16 / 9; 
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 25px rgba(233, 30, 99, 0.25); 
-    background: #000; /* Fondo negro por si el video tarda en cargar */
-}
-
-#videoContainer iframe{
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-#capitulos {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap; 
-    max-width: 850px;
-    margin: 0 auto 30px auto;
-}
-
-/* --- Botones de Capítulos --- */
-.capitulo{
-    background: transparent;
-    border: 2px solid #e91e63;
-    color: #e91e63;
-    padding: 10px 22px;
-    font-weight: bold;
-    font-size: 0.95rem;
-    cursor: pointer;
-    border-radius: 25px; 
-    transition: all .3s ease;
-}
-
-.capitulo:hover, .capitulo.activo {
-    background: #e91e63;
-    color: white;
-    box-shadow: 0px 0px 12px #e91e63;
-    transform: scale(1.05);
-}
-
-/* --- Footer de Comunidad --- */
-.footer-comunidad {
-    text-align: center;
-    padding: 50px 20px;
-    background: #15151a;
-    border-top: 2px solid #e91e63;
-    margin-top: 40px;
-}
-
-.footer-comunidad h2 {
-    margin-bottom: 10px;
-    color: white;
-}
-
-.footer-comunidad p {
-    margin-bottom: 25px;
-    color: #bbb;
-}
-
-.botones-comunidad {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-}
-
-.botones-comunidad a.btn-comunidad {
-    display: inline-flex !important;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none !important; 
-    color: white !important; 
-    padding: 12px 25px;
-    font-weight: bold;
-    border-radius: 30px; 
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.botones-comunidad a.telegram { background-color: #229ED9 !important; }
-.botones-comunidad a.telegram:hover { background-color: #1a7fb0 !important; }
-
-.botones-comunidad a.donacion { background-color: #e91e63 !important; }
-.botones-comunidad a.donacion:hover { background-color: #c2185b !important; }
-
-.credits {
-    font-size: 0.85rem;
-    color: #777 !important;
+// --- BUSCADOR INTEGRADO ---
+const buscador = document.getElementById("buscador");
+if (buscador) {
+    buscador.addEventListener("input", function() {
+        const textoBusqueda = this.value.toLowerCase();
+        const tarjetas = document.querySelectorAll(".card");
+        
+        tarjetas.forEach(card => {
+            const titulo = card.querySelector("h3").textContent.toLowerCase();
+            if (titulo.includes(textoBusqueda)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
 }
