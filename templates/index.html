@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glword</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">GLWORD</div>
+
+    <button id="menuBtn" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="menu">
+        <a href="#">Home</a>
+        <a href="#">Series GL</a>
+        <a href="#">Películas GL</a>
+        <a href="#">Cortos GL</a>
+        <a href="#">Series GL Ilimitado</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h1>Bienvenido a Glword</h1>
+    <p>Tu plataforma para series GL.</p>
+</section>
+
+<section class="catalogo" id="catalogoSection">
+    <h2>Series Populares</h2>
+    <div id="gridSeries" class="grid"></div>
+</section>
+
+<section class="player-section" id="playerSection" style="display: none;">
+    <h2 id="tituloSerie"></h2>
+
+    <div id="videoContainer" class="video-wrapper"></div>
+
+    <div id="capitulos" class="capitulos-grid"></div>
+
+    <div id="disqus_thread" class="comentarios-seccion"></div>
+</section>
+
+<footer class="footer-comunidad">
+    <h2>Únete a la Comunidad de Glword</h2>
+    <p>Apoya nuestras traducciones y no te pierdas ningún estreno.</p>
+    
+    <div class="botones-comunidad">
+        <a href="https://t.me/glwordsubs" target="_blank" class="btn-comunidad telegram">
+            <i class="fab fa-telegram-plane"></i> Telegram Channel
+        </a>
+        
+        <a href="https://link_de_tu_plataforma_de_donacion" target="_blank" class="btn-comunidad donacion">
+            <i class="fas fa-heart"></i> Apoyar el Proyecto
+        </a>
+    </div>
+    
+    <p class="credits">© 2026 Glword Sub Español. Hecho con ♡ para la comunidad GL.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
