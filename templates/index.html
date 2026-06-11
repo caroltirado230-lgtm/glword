@@ -11,7 +11,14 @@
 <body>
 
 <header>
-    <div class="logo">GLWORD</div>
+    <a href="#" class="logo">
+        <img src="/static/logo.png" alt="GLWORD" id="logoImg">
+    </a>
+
+    <div class="header-search">
+        <i class="fas fa-search"></i>
+        <input type="text" id="buscador" placeholder="Buscar serie..." class="search-input">
+    </div>
 
     <button id="menuBtn" aria-label="Abrir menú">
         <i class="fas fa-bars"></i>
@@ -27,16 +34,10 @@
 </header>
 
 <section class="banner">
-    <div class="banner-content">
-        <h1>Bienvenido a Glword</h1>
-        <p>Tu plataforma para series GL.</p>
-    </div>
+    <h1>Bienvenido a Glword</h1>
+    <p>Tu plataforma para series GL.</p>
 </section>
     
-<div class="search-container">
-    <input type="text" id="buscador" placeholder="🔍 Buscar serie..." class="search-bar">
-</div>
-
 <section class="catalogo" id="catalogoSection">
     <h2>Series Populares</h2>
     <div id="gridSeries" class="grid"></div>
@@ -44,28 +45,22 @@
 
 <section class="player-section" id="playerSection" style="display: none;">
     <h2 id="tituloSerie"></h2>
-
     <div id="videoContainer" class="video-wrapper"></div>
-
     <div id="capitulos" class="capitulos-grid"></div>
-
     <div id="disqus_thread" class="comentarios-seccion"></div>
 </section>
 
 <footer class="footer-comunidad">
     <h2>Únete a la Comunidad de Glword</h2>
     <p>Apoya nuestras traducciones y no te pierdas ningún estreno.</p>
-    
     <div class="botones-comunidad">
         <a href="https://t.me/glwordsubs" target="_blank" class="btn-comunidad telegram">
             <i class="fab fa-telegram-plane"></i> Telegram Channel
         </a>
-        
-        <a href="https://link_de_tu_plataforma_de_donacion" target="_blank" class="btn-comunidad donacion">
+        <a href="#" target="_blank" class="btn-comunidad donacion">
             <i class="fas fa-heart"></i> Apoyar el Proyecto
         </a>
     </div>
-    
     <p class="credits">© 2026 Glword Sub Español. Hecho con ♡ para la comunidad GL.</p>
 </footer>
 
