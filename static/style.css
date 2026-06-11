@@ -9,7 +9,6 @@ header {
     align-items: center; 
     padding: 15px 20px; 
     background: #121216; 
-    /* Borde difuminado estilo neón */
     border-bottom: 1px solid rgba(233, 30, 99, 0.5);
     box-shadow: 0px 4px 15px rgba(233, 30, 99, 0.4); 
     position: sticky;
@@ -26,7 +25,6 @@ header {
     height: 50px; 
     overflow: hidden;
     flex-shrink: 0;
-    /* Un toque de luz detrás del logo */
     filter: drop-shadow(0 0 8px rgba(233, 30, 99, 0.6));
 }
 
@@ -42,7 +40,6 @@ header {
     align-items: center;
     background: #1a1a24;
     border: 1px solid rgba(233, 30, 99, 0.4);
-    /* Aquí está el efecto de difuminado neón */
     box-shadow: 0 0 10px rgba(233, 30, 99, 0.3), inset 0 0 5px rgba(233, 30, 99, 0.2);
     border-radius: 25px; 
     padding: 5px 15px;
@@ -52,7 +49,6 @@ header {
     transition: 0.3s ease;
 }
 
-/* El resplandor crece al hacer clic en el buscador */
 .header-search:focus-within {
     border-color: #e91e63;
     box-shadow: 0 0 15px rgba(233, 30, 99, 0.7), inset 0 0 8px rgba(233, 30, 99, 0.4);
@@ -85,7 +81,6 @@ nav {
     border-radius: 8px; 
     z-index: 100; 
     min-width: 180px; 
-    /* Borde difuminado */
     border: 1px solid rgba(233, 30, 99, 0.5);
     box-shadow: 0 0 20px rgba(233, 30, 99, 0.5); 
 }
@@ -93,7 +88,7 @@ nav.mostrar-menu { display: block; }
 nav a { display: block; color: #fff; text-decoration: none; padding: 12px 15px; font-weight: 600; border-radius: 6px; transition: 0.2s;}
 nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233, 30, 99, 0.5); }
 
-/* --- Banner de Bienvenida --- */
+/* --- Banner de Bienvenida (Título con Color Neón Fuerte) --- */
 .banner { 
     text-align: center; 
     padding: 50px 20px; 
@@ -103,10 +98,10 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     margin-bottom: 30px;
 }
 .banner h1 { 
-    color: #ffffff; 
+    color: #e91e63; /* Cambiado a rosa neón fuerte */
     font-size: 2.2rem; 
     margin-bottom: 10px; 
-    /* Texto brillante */
+    /* Efecto difuminado extra de luz en las letras */
     text-shadow: 0 0 10px rgba(233, 30, 99, 0.8), 0 0 20px rgba(233, 30, 99, 0.4);
 }
 .banner p { color: #aaa; font-size: 1.1rem; }
@@ -118,7 +113,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     margin-bottom: 20px; 
     font-size: 1.5rem; 
     border-left: 4px solid #e91e63; 
-    box-shadow: -5px 0 10px -5px #e91e63; /* Resplandor sutil a la izquierda */
+    box-shadow: -5px 0 10px -5px #e91e63; 
     padding-left: 10px;
 }
 
@@ -132,14 +127,12 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     overflow: hidden; 
     cursor: pointer; 
     transition: all 0.3s ease; 
-    /* Borde sutil con resplandor fuerte */
     border: 1px solid rgba(233, 30, 99, 0.3); 
     box-shadow: 0 0 15px rgba(233, 30, 99, 0.2);
 }
 .card:hover { 
     transform: translateY(-5px); 
     border-color: rgba(233, 30, 99, 0.8);
-    /* Resplandor intenso al pasar el mouse */
     box-shadow: 0 0 25px rgba(233, 30, 99, 0.6), 0 0 10px rgba(233, 30, 99, 0.4) inset; 
 }
 .card img { width: 100%; height: 220px; object-fit: cover; opacity: 0.9; transition: 0.3s;}
@@ -158,7 +151,6 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 }
 #tituloSerie { font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 15px; color: #fff; text-shadow: 0 0 8px rgba(233, 30, 99, 0.5); }
 
-/* Botones con Resplandor */
 .btn-volver { 
     background: rgba(233, 30, 99, 0.1); 
     color: #ff4081; 
@@ -195,4 +187,51 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     border-radius: 25px; 
     cursor: pointer; 
     font-weight: bold;
-    transition: 0.
+    transition: 0.3s; 
+}
+.capitulo.activo, .capitulo:hover { 
+    background: #e91e63; 
+    color: white; 
+    border-color: #e91e63;
+    box-shadow: 0 0 20px #e91e63;
+}
+
+/* --- Footer (Botones de Comunidad con Colores Originales Solidos) --- */
+.footer-comunidad { 
+    text-align: center; 
+    padding: 50px 20px; 
+    background: #121216; 
+    border-top: 1px solid rgba(233, 30, 99, 0.4);
+    box-shadow: 0 -4px 20px rgba(233, 30, 99, 0.2);
+    margin-top: 40px; 
+}
+.footer-comunidad h2 { color: #ffffff; text-shadow: 0 0 8px rgba(233, 30, 99, 0.5); }
+.footer-comunidad p { color: #aaa; margin: 10px 0 20px 0; }
+.botones-comunidad { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+.btn-comunidad { padding: 12px 25px; border-radius: 25px; text-decoration: none; color: white; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s;}
+
+/* Botón Telegram: Azul Sólido Original con Brillo */
+.telegram { 
+    background-color: #229ED9; 
+    border: none; 
+    color: #ffffff; 
+    box-shadow: 0 4px 15px rgba(34, 158, 217, 0.4); 
+}
+.telegram:hover { 
+    background-color: #1b85b8; 
+    box-shadow: 0 0 25px #229ED9; 
+}
+
+/* Botón Apoya/Donación: Fucsia Sólido Original con Brillo */
+.donacion { 
+    background-color: #e91e63; 
+    border: none; 
+    color: #ffffff; 
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4); 
+}
+.donacion:hover { 
+    background-color: #c2185b; 
+    box-shadow: 0 0 25px #e91e63; 
+}
+
+.credits { margin-top: 30px !important; font-size: 0.85rem; color: #666 !important; }
