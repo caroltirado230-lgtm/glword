@@ -1,7 +1,7 @@
 const series = [
     { titulo: "Chasing Love", portada: "/static/chasing.jpeg", capitulos: [{ nombre: "Capítulo 1", url: "https://www.bitchute.com/embed/omhOOMuqUsgL" }, { nombre: "Capítulo 2", url: "https://www.bitchute.com/embed/TakE5P18BWDo" }] },
     { titulo: "GAP", portada: "/static/gap.jpg", capitulos: [{ nombre: "Capítulo 1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }] },
-    { titulo: "Affair", portada: "/static/affair.jpg", capitulos: [{ nombre: "Capítulo 1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }] }
+    { titulo: "Affair", portada: "/static/affair.jpg", capitulos: [{ nombre: "Capítulo 1", url: "https://videa.hu/videok/film-animacio/affair-1-EVag5eqDesZPP0LZ" }] }
 ];
 
 const menuBtn = document.getElementById("menuBtn");
