@@ -1,21 +1,23 @@
-/* --- Estilos Generales y Limpieza --- */
+/* --- Estilos Generales --- */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body { background: #fafafa; color: #1a1a2e; } /* Fondo blanco tiza muy sutil */
+body { background: #0a0a0c; color: #ffffff; } /* Fondo negro muy profundo */
 
-/* --- Encabezado / Header (Con Borde Inferior Neón) --- */
+/* --- Encabezado / Header (Resplandor Neón Inferior) --- */
 header { 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     padding: 15px 20px; 
-    background: #ffffff; 
-    border-bottom: 2px solid #e91e63; /* Borde rosa neón */
+    background: #121216; 
+    /* Borde difuminado estilo neón */
+    border-bottom: 1px solid rgba(233, 30, 99, 0.5);
+    box-shadow: 0px 4px 15px rgba(233, 30, 99, 0.4); 
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* --- Ajuste estricto del Logo (Pequeño como pediste) --- */
+/* --- Ajuste estricto del Logo --- */
 .logo {
     display: flex;
     align-items: center;
@@ -24,6 +26,8 @@ header {
     height: 50px; 
     overflow: hidden;
     flex-shrink: 0;
+    /* Un toque de luz detrás del logo */
+    filter: drop-shadow(0 0 8px rgba(233, 30, 99, 0.6));
 }
 
 #logoImg {
@@ -32,27 +36,29 @@ header {
     object-fit: contain;
 }
 
-/* --- Buscador (Con Borde Neón Redondeado) --- */
+/* --- Buscador (Borde Neón Difuminado) --- */
 .header-search {
     display: flex;
     align-items: center;
-    background: #ffffff;
-    border: 2px solid #e91e63; /* Borde rosa neón */
+    background: #1a1a24;
+    border: 1px solid rgba(233, 30, 99, 0.4);
+    /* Aquí está el efecto de difuminado neón */
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.3), inset 0 0 5px rgba(233, 30, 99, 0.2);
     border-radius: 25px; 
     padding: 5px 15px;
     flex-grow: 1;
     margin: 0 15px;
     max-width: 400px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-/* Efecto al hacer clic en el buscador */
+/* El resplandor crece al hacer clic en el buscador */
 .header-search:focus-within {
-    box-shadow: 0 0 12px rgba(233, 30, 99, 0.4);
-    background: #fff;
+    border-color: #e91e63;
+    box-shadow: 0 0 15px rgba(233, 30, 99, 0.7), inset 0 0 8px rgba(233, 30, 99, 0.4);
 }
 
-.header-search i { color: #e91e63; font-size: 1rem; } /* Icono neón */
+.header-search i { color: #ff4081; font-size: 1rem; text-shadow: 0 0 5px #ff4081; }
 
 .search-input {
     border: none;
@@ -60,95 +66,111 @@ header {
     padding: 8px;
     width: 100%;
     outline: none;
-    color: #333;
+    color: #ffffff;
     font-size: 0.95rem;
     margin-left: 8px;
 }
+.search-input::placeholder { color: #888; }
 
-#menuBtn { background: none; border: none; color: #e91e63; font-size: 24px; cursor: pointer; }
+#menuBtn { background: none; border: none; color: #e91e63; font-size: 24px; cursor: pointer; text-shadow: 0 0 8px #e91e63; }
 
-/* --- Menú Flotante (Con Borde Neón) --- */
+/* --- Menú Flotante --- */
 nav { 
     display: none; 
     position: absolute; 
     top: 65px; 
     right: 20px; 
-    background: #ffffff; 
+    background: #121216; 
     padding: 10px; 
     border-radius: 8px; 
-    box-shadow: 0px 4px 20px rgba(0,0,0,0.1); 
     z-index: 100; 
     min-width: 180px; 
-    border: 2px solid #e91e63; /* Borde rosa neón */
+    /* Borde difuminado */
+    border: 1px solid rgba(233, 30, 99, 0.5);
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.5); 
 }
 nav.mostrar-menu { display: block; }
-nav a { display: block; color: #333; text-decoration: none; padding: 12px 15px; font-weight: 600; border-radius: 6px; }
-nav a:hover { background: #e91e63; color: white; }
+nav a { display: block; color: #fff; text-decoration: none; padding: 12px 15px; font-weight: 600; border-radius: 6px; transition: 0.2s;}
+nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233, 30, 99, 0.5); }
 
-/* --- Banner de Bienvenida (Fondo Claro, Borde Inferior Neón) --- */
+/* --- Banner de Bienvenida --- */
 .banner { 
     text-align: center; 
     padding: 50px 20px; 
-    background: #ffffff;
-    border-bottom: 2px solid #e91e63; /* Borde rosa neón */
+    background: #121216;
+    border-bottom: 1px solid rgba(233, 30, 99, 0.3);
+    box-shadow: 0px 4px 20px rgba(233, 30, 99, 0.2);
     margin-bottom: 30px;
 }
-.banner h1 { color: #1a1a2e; font-size: 2.2rem; margin-bottom: 10px; }
-.banner p { color: #666; font-size: 1.1rem; }
+.banner h1 { 
+    color: #ffffff; 
+    font-size: 2.2rem; 
+    margin-bottom: 10px; 
+    /* Texto brillante */
+    text-shadow: 0 0 10px rgba(233, 30, 99, 0.8), 0 0 20px rgba(233, 30, 99, 0.4);
+}
+.banner p { color: #aaa; font-size: 1.1rem; }
 
 /* --- Catálogo y Títulos --- */
 .catalogo { padding: 0 20px 20px 20px; }
 .catalogo h2 { 
-    color: #1a1a2e; 
+    color: #ffffff; 
     margin-bottom: 20px; 
     font-size: 1.5rem; 
-    border-left: 4px solid #e91e63; /* Acento de neón al lado del título */
+    border-left: 4px solid #e91e63; 
+    box-shadow: -5px 0 10px -5px #e91e63; /* Resplandor sutil a la izquierda */
     padding-left: 10px;
 }
 
-/* --- Grid de Tarjetas (Con Bordes Neón e Imágenes de vuelta) --- */
+/* --- Grid de Tarjetas (Bordes Neón Difuminados) --- */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; }
 @media (min-width: 768px) { .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; } }
 
 .card { 
-    background: #ffffff; 
+    background: #15151a; 
     border-radius: 12px; 
     overflow: hidden; 
     cursor: pointer; 
-    transition: 0.3s; 
-    border: 2px solid #e91e63; /* Borde rosa neón alrededor de cada tarjeta */
-    box-shadow: 0 4px 10px rgba(233, 30, 99, 0.1);
+    transition: all 0.3s ease; 
+    /* Borde sutil con resplandor fuerte */
+    border: 1px solid rgba(233, 30, 99, 0.3); 
+    box-shadow: 0 0 15px rgba(233, 30, 99, 0.2);
 }
 .card:hover { 
     transform: translateY(-5px); 
-    box-shadow: 0 0 20px rgba(233, 30, 99, 0.4); /* Resplandor de neón al pasar el mouse */
+    border-color: rgba(233, 30, 99, 0.8);
+    /* Resplandor intenso al pasar el mouse */
+    box-shadow: 0 0 25px rgba(233, 30, 99, 0.6), 0 0 10px rgba(233, 30, 99, 0.4) inset; 
 }
-.card img { width: 100%; height: 220px; object-fit: cover; }
+.card img { width: 100%; height: 220px; object-fit: cover; opacity: 0.9; transition: 0.3s;}
+.card:hover img { opacity: 1; }
 @media (min-width: 768px) { .card img { height: 320px; } }
-.card h3 { padding: 15px; font-size: 1rem; text-align: center; color: #1a1a2e; font-weight: bold; }
+.card h3 { padding: 15px; font-size: 1rem; text-align: center; color: #ffffff; font-weight: bold; }
 
-/* --- Reproductor (Con Bordes Superiores Neón) --- */
+/* --- Reproductor --- */
 .player-section { 
     padding: 40px 20px; 
-    background: #ffffff; 
+    background: #121216; 
     text-align: center; 
-    border-top: 2px solid #e91e63; /* Borde rosa neón arriba */
+    border-top: 1px solid rgba(233, 30, 99, 0.4);
+    box-shadow: 0 -4px 20px rgba(233, 30, 99, 0.2);
     margin-top: 30px;
 }
-#tituloSerie { font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 15px; color: #1a1a2e; }
+#tituloSerie { font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 15px; color: #fff; text-shadow: 0 0 8px rgba(233, 30, 99, 0.5); }
 
-/* Botones con estilo 'Outline Neón' */
+/* Botones con Resplandor */
 .btn-volver { 
-    background: transparent; 
-    color: #e91e63; 
-    border: 2px solid #e91e63; /* Borde rosa neón */
+    background: rgba(233, 30, 99, 0.1); 
+    color: #ff4081; 
+    border: 1px solid rgba(233, 30, 99, 0.5); 
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
     padding: 8px 15px; 
     border-radius: 20px; 
     cursor: pointer; 
     font-weight: bold;
     transition: 0.3s;
 }
-.btn-volver:hover { background: #e91e63; color: white; box-shadow: 0 0 10px #e91e63;}
+.btn-volver:hover { background: #e91e63; color: white; box-shadow: 0 0 20px #e91e63; }
 
 #videoContainer { 
     max-width: 850px; 
@@ -157,48 +179,20 @@ nav a:hover { background: #e91e63; color: white; }
     border-radius: 10px; 
     overflow: hidden; 
     background: #000; 
-    border: 2px solid #e91e63; /* Borde rosa neón alrededor del video */
-    box-shadow: 0 0 15px rgba(233, 30, 99, 0.2); 
+    border: 1px solid rgba(233, 30, 99, 0.4);
+    box-shadow: 0 0 25px rgba(233, 30, 99, 0.4); 
 }
 #videoContainer iframe { width: 100%; height: 100%; border: none; }
 
 .capitulos-grid { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
 
-/* Botones de capítulos 'Outline Neón' */
 .capitulo { 
-    background: white; 
-    border: 2px solid #e91e63; /* Borde rosa neón */
-    color: #e91e63; 
+    background: #121216; 
+    border: 1px solid rgba(233, 30, 99, 0.4); 
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.2);
+    color: #ff4081; 
     padding: 10px 20px; 
     border-radius: 25px; 
     cursor: pointer; 
     font-weight: bold;
-    transition: 0.2s; 
-}
-.capitulo.activo, .capitulo:hover { 
-    background: #e91e63; 
-    color: white; 
-    box-shadow: 0 0 15px #e91e63;
-}
-
-/* --- Footer (Con Borde Superior Neón) --- */
-.footer-comunidad { 
-    text-align: center; 
-    padding: 50px 20px; 
-    background: #ffffff; 
-    border-top: 2px solid #e91e63; /* Borde rosa neón arriba */
-    margin-top: 40px; 
-}
-.footer-comunidad h2 { color: #1a1a2e; }
-.footer-comunidad p { color: #666; margin: 10px 0 20px 0; }
-.botones-comunidad { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-.btn-comunidad { padding: 12px 25px; border-radius: 25px; text-decoration: none; color: white; font-weight: bold; display: inline-flex; align-items: center; gap: 8px;}
-
-/* Botones de footer con sus colores, pero manteniendo bordes si los prefieres outline */
-.telegram { background-color: #229ED9; border: 2px solid #229ED9; }
-.telegram:hover { box-shadow: 0 0 10px #229ED9; }
-
-.donacion { background-color: #e91e63; border: 2px solid #e91e63; }
-.donacion:hover { box-shadow: 0 0 10px #e91e63; }
-
-.credits { margin-top: 30px !important; font-size: 0.85rem; color: #999 !important; }
+    transition: 0.
