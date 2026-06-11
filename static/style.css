@@ -1,6 +1,9 @@
 /* --- Estilos Generales --- */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body { background: #fafafa; color: #1a1a2e; } /* Fondo blanco tiza */
+body { 
+    background: #f4f4f8; /* Un tono sutilmente gris/azulado muy claro */
+    color: #1a1a2e; 
+}
 
 /* --- Encabezado --- */
 header { 
@@ -64,12 +67,36 @@ nav.mostrar-menu { display: block; }
 nav a { display: block; color: #333; text-decoration: none; padding: 12px 15px; font-weight: 600; border-radius: 6px; }
 nav a:hover { background: #f0f0f0; color: #e91e63; }
 
-/* --- Textos --- */
-.banner { text-align: center; padding: 40px 20px 20px 20px; }
-.banner h1 { color: #1a1a2e; font-size: 2rem; margin-bottom: 5px; }
-.banner p { color: #666; }
+/* --- Textos y Banner --- */
+.banner { 
+    text-align: center; 
+    padding: 50px 20px; 
+    /* Un degradado hermoso usando tu color fucsia */
+    background: linear-gradient(135deg, #e91e63 0%, #ff6090 100%);
+    color: white;
+    border-radius: 0 0 20px 20px; /* Bordes redondeados abajo */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+.banner h1 { 
+    font-size: 2.2rem; 
+    margin-bottom: 10px; 
+    color: white; /* Letras blancas para contrastar con el fondo fucsia */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.banner p { 
+    color: #ffe0e9; /* Un rosita muy claro para el subtítulo */
+    font-size: 1.1rem;
+}
+
 .catalogo { padding: 0 20px 20px 20px; }
-.catalogo h2 { color: #1a1a2e; margin-bottom: 20px; font-size: 1.5rem; }
+.catalogo h2 { 
+    color: #1a1a2e; 
+    margin-bottom: 20px; 
+    font-size: 1.5rem; 
+    border-left: 4px solid #e91e63; /* Una línea de color al lado del título */
+    padding-left: 10px;
+}  
 
 /* --- Grid de Tarjetas (Como en tu captura) --- */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; }
