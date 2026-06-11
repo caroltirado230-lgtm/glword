@@ -15,10 +15,21 @@ header {
     z-index: 1000;
 }
 
-/* Ajuste del Logo */
-.logo img { 
-    max-height: 40px; /* Ajusta este valor si tu logo es muy grande o pequeño */
-    width: auto;
+/* --- Ajuste estricto del Logo --- */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Ajusta este valor si lo quieres un poquito más ancho */
+    height: 50px; /* Ajusta este valor si lo quieres un poquito más alto */
+    overflow: hidden;
+    flex-shrink: 0; /* Evita que el buscador aplaste el logo */
+}
+
+#logoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Esto hace que la imagen se adapte sin deformarse */
 }
 
 /* Buscador en el header */
