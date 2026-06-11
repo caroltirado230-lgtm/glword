@@ -1,20 +1,51 @@
 const series = [
-    { titulo: "Chasing Love", portada: "/static/chasing.jpeg", capitulos: [{ nombre: "Capítulo 1", url: "https://www.bitchute.com/embed/omhOOMuqUsgL" }, { nombre: "Capítulo 2", url: "https://www.bitchute.com/embed/TakE5P18BWDo" }] },
-    { titulo: "GAP", portada: "/static/gap.jpg", capitulos: [{ nombre: "Capítulo 1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }] },
+    { 
+        titulo: "Chasing Love", 
+        portada: "/static/chasing.jpeg", 
+        drama: "Chasing Love",
+        pais: "Tailandia",
+        episodios: "8",
+        emision: "2026",
+        cadena: "netflix",
+        sinopsis: "Dos jóvenes se encuentran en un laboratorio y una historia de amor inesperada comienza a surgir entre ellas...",
+        capitulos: [
+            { nombre: "Capítulo 1", url: "https://www.bitchute.com/embed/omhOOMuqUsgL" }, 
+            { nombre: "Capítulo 2", url: "https://www.bitchute.com/embed/TakE5P18BWDo" }
+        ] 
+    },
+    { 
+        titulo: "GAP", 
+        portada: "/static/gap.jpg",
+        drama: "GAP The Series",
+        pais: "Tailandia",
+        episodios: "12",
+        emision: "Nov 2022 - Feb 2023",
+        cadena: "Channel 3, iQiyi",
+        sinopsis: "Mon, una joven recién graduada, empieza a trabajar en la empresa de su ídolo de la infancia, Sam. Sin embargo, al conocerla, descubre que es muy diferente a lo que imaginaba.",
+        capitulos: [
+            { nombre: "Capítulo 1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+        ] 
+    },
     { 
         titulo: "Affair", 
         portada: "/static/affair.jpg", 
+        drama: "Affair",
+        pais: "Tailandia",
+        episodios: "8",
+        emision: "ago 30, 2024 - ?",
+        cadena: "iQiyi, One 31",
+        sinopsis: "Soy Phleng. Nací con una vida perfecta, pero todo cambió muy rápidamente después de que mi familia quebró. La vida no era tan mala cuando tenía a mi amiga de la infancia, Wanwiwa, que creció a mi lado. Sin embargo, por alguna desafortunada razón tuve que marcharme. Más de una década después, el destino juega su papel y nos vuelve a unir.",
         capitulos: [
-            { nombre: "Capítulo 1", url: "https://videa.hu/player?v=EVag5eqDesZPP0LZ" },
-            { nombre: "Capítulo 2", url: "https://videa.hu/player?v=E2XXTlWOV5JScAdN" },
-            { nombre: "Capítulo 3", url: "https://videa.hu/player?v=r1agOy5u7W7f2aAO" },
-            { nombre: "Capítulo 4", url: "https://videa.hu/player?v=0N4FHliz32UbIIbJ" },
-            { nombre: "Capítulo 5", url: "https://videa.hu/player?v=QYZeapYyAxuwqdrY" },
-            { nombre: "Capítulo 6", url: "https://videa.hu/player?v=PRxxAkuCpVFzddwz" },
-            { nombre: "Capítulo 7", url: "https://videa.hu/player?v=BOoFnLRf7dyp1MDu" },
-            { nombre: "Capítulo 8", url: "https://videa.hu/player?v=JWFzKWK0nJHzz5ym" }
+            { nombre: "EP1", url: "https://videa.hu/player?v=EVag5eqDesZPP0LZ" },
+            { nombre: "EP2", url: "https://videa.hu/player?v=E2XXTlWOV5JScAdN" },
+            { nombre: "EP3", url: "https://videa.hu/player?v=r1agOy5u7W7f2aAO" },
+            { nombre: "EP4", url: "https://videa.hu/player?v=0N4FHliz32UbIIbJ" },
+            { nombre: "EP5", url: "https://videa.hu/player?v=QYZeapYyAxuwqdrY" },
+            { nombre: "EP6", url: "https://videa.hu/player?v=PRxxAkuCpVFzddwz" },
+            { nombre: "EP7", url: "https://videa.hu/player?v=BOoFnLRf7dyp1MDu" },
+            { nombre: "EP8 Final", url: "https://videa.hu/player?v=JWFzKWK0nJHzz5ym" }
         ] 
-    },
+    }
 ];
 
 const menuBtn = document.getElementById("menuBtn");
@@ -44,12 +75,28 @@ function renderizarSeries(lista = series) {
 function abrirSerie(serie) {
     catalogoSection.style.display = "none";
     playerSection.style.display = "block";
+    
+    // Título principal
     document.getElementById("tituloSerie").innerHTML = `<button onclick="cerrarSerie()" class="btn-volver">← Volver</button> ${serie.titulo}`;
+    
+    // Rellenar la información técnica de la serie dinámicamente
+    if (document.getElementById("meta-drama")) {
+        document.getElementById("meta-drama").innerText = serie.drama || serie.titulo;
+        document.getElementById("meta-pais").innerText = serie.pais || "Tailandia";
+        document.getElementById("meta-episodios").innerText = serie.episodios || "?";
+        document.getElementById("meta-emision").innerText = serie.emision || "?";
+        document.getElementById("meta-cadena").innerText = serie.cadena || "?";
+        document.getElementById("sinopsisSerie").innerText = serie.sinopsis || "Sinopsis no disponible en este momento.";
+    }
+
     const vCont = document.getElementById("videoContainer");
     const caps = document.getElementById("capitulos");
     caps.innerHTML = "";
+    
+    // Cargar el primer video
     vCont.innerHTML = `<iframe src="${serie.capitulos[0].url}" allowfullscreen></iframe>`;
     
+    // Crear los botones anchos de capítulos
     serie.capitulos.forEach((cap, i) => {
         const btn = document.createElement("button");
         btn.className = `capitulo ${i === 0 ? 'activo' : ''}`;
@@ -69,7 +116,7 @@ function cerrarSerie() {
     document.getElementById("videoContainer").innerHTML = "";
 }
 
-// Inicializar
+// Inicializar el catálogo
 renderizarSeries();
 
 // Buscador
