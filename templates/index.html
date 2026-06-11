@@ -45,8 +45,24 @@
 
 <section class="player-section" id="playerSection" style="display: none;">
     <h2 id="tituloSerie"></h2>
+    
     <div id="videoContainer" class="video-wrapper"></div>
-    <div id="capitulos" class="capitulos-grid"></div>
+
+    <div class="info-serie">
+        <ul class="metadata">
+            <li><strong>Drama:</strong> <span id="meta-drama">Nombre del Drama</span></li>
+            <li><strong>País:</strong> <span id="meta-pais">Tailandia</span></li>
+            <li><strong>Episodios:</strong> <span id="meta-episodios">8</span></li>
+            <li><strong>Emisión:</strong> <span id="meta-emision">ago 30, 2024 - ?</span></li>
+            <li><strong>Cadena:</strong> <span id="meta-cadena">iQiyi, One 31</span></li>
+        </ul>
+        <p class="sinopsis" id="sinopsisSerie">
+            Aquí irá la descripción o sinopsis de la serie. (Puedes llenar esto desde tu script.js).
+        </p>
+    </div>
+
+    <div id="capitulos" class="capitulos-lista"></div>
+    
     <div id="disqus_thread" class="comentarios-seccion"></div>
 </section>
 
