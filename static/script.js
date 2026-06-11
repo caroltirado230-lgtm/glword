@@ -1,3 +1,7 @@
+// --- PRUEBA DE CONEXIÓN ---
+alert("¡Hola! El archivo script.js sí se está cargando correctamente.");
+console.log("Iniciando script...");
+
 const series = [
     { 
         titulo: "Chasing Love", 
@@ -54,6 +58,12 @@ const catalogoSection = document.getElementById("catalogoSection");
 const playerSection = document.getElementById("playerSection");
 const grid = document.getElementById("gridSeries");
 
+if (!grid) {
+    console.error("ERROR CRÍTICO: No se encontró el elemento con ID 'gridSeries' en el HTML.");
+} else {
+    console.log("¡Contenedor gridSeries encontrado con éxito!");
+}
+
 // Menú
 if (menuBtn && menu) {
     menuBtn.addEventListener("click", () => menu.classList.toggle("mostrar-menu"));
@@ -70,16 +80,15 @@ function renderizarSeries(lista = series) {
         card.addEventListener("click", () => abrirSerie(serie));
         grid.appendChild(card);
     });
+    console.log("Series renderizadas en pantalla.");
 }
 
 function abrirSerie(serie) {
     catalogoSection.style.display = "none";
     playerSection.style.display = "block";
     
-    // Título principal
     document.getElementById("tituloSerie").innerHTML = `<button onclick="cerrarSerie()" class="btn-volver">← Volver</button> ${serie.titulo}`;
     
-    // Rellenar la información técnica de la serie dinámicamente
     if (document.getElementById("meta-drama")) {
         document.getElementById("meta-drama").innerText = serie.drama || serie.titulo;
         document.getElementById("meta-pais").innerText = serie.pais || "Tailandia";
@@ -93,10 +102,8 @@ function abrirSerie(serie) {
     const caps = document.getElementById("capitulos");
     caps.innerHTML = "";
     
-    // Cargar el primer video
     vCont.innerHTML = `<iframe src="${serie.capitulos[0].url}" allowfullscreen></iframe>`;
     
-    // Crear los botones anchos de capítulos
     serie.capitulos.forEach((cap, i) => {
         const btn = document.createElement("button");
         btn.className = `capitulo ${i === 0 ? 'activo' : ''}`;
