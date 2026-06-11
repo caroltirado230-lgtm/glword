@@ -203,7 +203,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     background: #121216; 
     border-top: 1px solid rgba(233, 30, 99, 0.4);
     box-shadow: 0 -4px 20px rgba(233, 30, 99, 0.2);
-    margin-top: 40px; 
+    margin-top: 150px; /* <--- AQUÍ ESTÁ EL CAMBIO: empuja el footer mucho más abajo */
 }
 .footer-comunidad h2 { color: #ffffff; text-shadow: 0 0 8px rgba(233, 30, 99, 0.5); }
 .footer-comunidad p { color: #aaa; margin: 10px 0 20px 0; }
