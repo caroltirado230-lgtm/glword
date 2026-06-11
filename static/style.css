@@ -88,7 +88,7 @@ nav.mostrar-menu { display: block; }
 nav a { display: block; color: #fff; text-decoration: none; padding: 12px 15px; font-weight: 600; border-radius: 6px; transition: 0.2s;}
 nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233, 30, 99, 0.5); }
 
-/* --- Banner de Bienvenida (Título con Color Neón Fuerte) --- */
+/* --- Banner de Bienvenida --- */
 .banner { 
     text-align: center; 
     padding: 50px 20px; 
@@ -98,10 +98,9 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     margin-bottom: 30px;
 }
 .banner h1 { 
-    color: #e91e63; /* Cambiado a rosa neón fuerte */
+    color: #e91e63; 
     font-size: 2.2rem; 
     margin-bottom: 10px; 
-    /* Efecto difuminado extra de luz en las letras */
     text-shadow: 0 0 10px rgba(233, 30, 99, 0.8), 0 0 20px rgba(233, 30, 99, 0.4);
 }
 .banner p { color: #aaa; font-size: 1.1rem; }
@@ -117,7 +116,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     padding-left: 10px;
 }
 
-/* --- Grid de Tarjetas (Bordes Neón Difuminados) --- */
+/* --- Grid de Tarjetas --- */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; }
 @media (min-width: 768px) { .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; } }
 
@@ -151,22 +150,9 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 }
 #tituloSerie { font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 15px; color: #fff; text-shadow: 0 0 8px rgba(233, 30, 99, 0.5); }
 
-.btn-volver { 
-    background: rgba(233, 30, 99, 0.1); 
-    color: #ff4081; 
-    border: 1px solid rgba(233, 30, 99, 0.5); 
-    box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
-    padding: 8px 15px; 
-    border-radius: 20px; 
-    cursor: pointer; 
-    font-weight: bold;
-    transition: 0.3s;
-}
-.btn-volver:hover { background: #e91e63; color: white; box-shadow: 0 0 20px #e91e63; }
-
 #videoContainer { 
     max-width: 850px; 
-    margin: 0 auto; 
+    margin: 0 auto 30px auto; 
     aspect-ratio: 16 / 9; 
     border-radius: 10px; 
     overflow: hidden; 
@@ -176,10 +162,43 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 }
 #videoContainer iframe { width: 100%; height: 100%; border: none; }
 
-/* --- NUEVO: Información de la Serie (Metadatos y Sinopsis) --- */
+/* --- Rediseño de .capitulos-grid para que actúe como Lista Vertical --- */
+.capitulos-grid { 
+    display: flex; 
+    flex-direction: column; /* Apila los capítulos verticalmente */
+    gap: 12px; 
+    max-width: 600px; 
+    margin: 0 auto 30px auto; 
+}
+
+/* Estilo para las barras de capítulos individuales */
+.capitulo { 
+    width: 100%; 
+    background: #121216; 
+    border: 1px solid rgba(233, 30, 99, 0.4); 
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.2);
+    color: #ff4081; 
+    padding: 15px 25px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: left; /* Alineado a la izquierda como en tus fotos */
+    transition: 0.3s; 
+}
+
+.capitulo.activo, .capitulo:hover { 
+    background: #e91e63; 
+    color: white; 
+    border-color: #e91e63;
+    box-shadow: 0 0 20px #e91e63;
+    transform: scale(1.01);
+}
+
+/* --- Detalles Técnicos y Sinopsis --- */
 .info-serie {
     max-width: 850px;
-    margin: 30px auto;
+    margin: 40px auto;
     text-align: left;
     color: #ddd;
 }
@@ -187,21 +206,21 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 .metadata {
     list-style: none;
     padding: 20px;
-    background: rgba(233, 30, 99, 0.05);
+    background: rgba(233, 30, 99, 0.04);
     border: 1px solid rgba(233, 30, 99, 0.2);
     border-radius: 10px;
     margin-bottom: 25px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
 .metadata li {
     margin-bottom: 10px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .metadata li strong {
     color: #e91e63;
-    text-shadow: 0 0 5px rgba(233, 30, 99, 0.4);
+    text-shadow: 0 0 5px rgba(233, 30, 99, 0.3);
 }
 
 .sinopsis {
@@ -211,39 +230,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     color: #bbb;
 }
 
-/* --- NUEVO: Capítulos en formato "Lista Ancha" --- */
-.capitulos-lista { 
-    display: flex; 
-    flex-direction: column; /* Apila los botones verticalmente */
-    gap: 12px; 
-    max-width: 600px; 
-    margin: 0 auto 40px auto; 
-}
-
-.capitulo { 
-    width: 100%; /* Toma todo el ancho disponible */
-    background: #121216; 
-    border: 1px solid rgba(233, 30, 99, 0.4); 
-    box-shadow: 0 0 10px rgba(233, 30, 99, 0.2);
-    color: #ff4081; 
-    padding: 15px 25px; 
-    border-radius: 8px; /* Bordes menos redondeados */
-    cursor: pointer; 
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-align: left; /* Texto a la izquierda */
-    transition: 0.3s; 
-}
-
-.capitulo.activo, .capitulo:hover { 
-    background: #e91e63; 
-    color: white; 
-    border-color: #e91e63;
-    box-shadow: 0 0 20px #e91e63;
-    transform: scale(1.02); /* Crece un poquito al pasar el mouse */
-}
-
-/* --- Footer (Botones de Comunidad con Colores Originales Solidos) --- */
+/* --- Footer --- */
 .footer-comunidad { 
     text-align: center; 
     padding: 50px 20px; 
@@ -257,28 +244,20 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 .botones-comunidad { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
 .btn-comunidad { padding: 12px 25px; border-radius: 25px; text-decoration: none; color: white; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s;}
 
-/* Botón Telegram: Azul Sólido Original con Brillo */
 .telegram { 
     background-color: #229ED9; 
     border: none; 
     color: #ffffff; 
     box-shadow: 0 4px 15px rgba(34, 158, 217, 0.4); 
 }
-.telegram:hover { 
-    background-color: #1b85b8; 
-    box-shadow: 0 0 25px #229ED9; 
-}
+.telegram:hover { background-color: #1b85b8; box-shadow: 0 0 25px #229ED9; }
 
-/* Botón Apoya/Donación: Fucsia Sólido Original con Brillo */
 .donacion { 
     background-color: #e91e63; 
     border: none; 
     color: #ffffff; 
     box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4); 
 }
-.donacion:hover { 
-    background-color: #c2185b; 
-    box-shadow: 0 0 25px #e91e63; 
-}
+.donacion:hover { background-color: #c2185b; box-shadow: 0 0 25px #e91e63; }
 
 .credits { margin-top: 30px !important; font-size: 0.85rem; color: #666 !important; }
