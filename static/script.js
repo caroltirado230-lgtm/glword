@@ -1,7 +1,20 @@
 const series = [
     { titulo: "Chasing Love", portada: "/static/chasing.jpeg", capitulos: [{ nombre: "Capítulo 1", url: "https://www.bitchute.com/embed/omhOOMuqUsgL" }, { nombre: "Capítulo 2", url: "https://www.bitchute.com/embed/TakE5P18BWDo" }] },
     { titulo: "GAP", portada: "/static/gap.jpg", capitulos: [{ nombre: "Capítulo 1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }] },
-    { titulo: "Affair", portada: "/static/affair.jpg", capitulos: [{ nombre: "Capítulo 1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }] },
+    { 
+        titulo: "Affair", 
+        portada: "/static/affair.jpg", 
+        capitulos: [
+            { nombre: "Capítulo 1", url: "https://videa.hu/player?v=EVag5eqDesZPP0LZ" },
+            { nombre: "Capítulo 2", url: "https://videa.hu/player?v=E2XXTlWOV5JScAdN" },
+            { nombre: "Capítulo 3", url: "https://videa.hu/player?v=r1agOy5u7W7f2aAO" },
+            { nombre: "Capítulo 4", url: "https://videa.hu/player?v=0N4FHliz32UbIIbJ" },
+            { nombre: "Capítulo 5", url: "https://videa.hu/player?v=QYZeapYyAxuwqdrY" },
+            { nombre: "Capítulo 6", url: "https://videa.hu/player?v=PRxxAkuCpVFzddwz" },
+            { nombre: "Capítulo 7", url: "https://videa.hu/player?v=BOoFnLRf7dyp1MDu" },
+            { nombre: "Capítulo 8", url: "https://videa.hu/player?v=JWFzKWK0nJHzz5ym" }
+        ] 
+    },
 ];
 
 const menuBtn = document.getElementById("menuBtn");
