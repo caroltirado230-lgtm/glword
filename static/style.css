@@ -176,24 +176,71 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 }
 #videoContainer iframe { width: 100%; height: 100%; border: none; }
 
-.capitulos-grid { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+/* --- NUEVO: Información de la Serie (Metadatos y Sinopsis) --- */
+.info-serie {
+    max-width: 850px;
+    margin: 30px auto;
+    text-align: left;
+    color: #ddd;
+}
+
+.metadata {
+    list-style: none;
+    padding: 20px;
+    background: rgba(233, 30, 99, 0.05);
+    border: 1px solid rgba(233, 30, 99, 0.2);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.metadata li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.metadata li strong {
+    color: #e91e63;
+    text-shadow: 0 0 5px rgba(233, 30, 99, 0.4);
+}
+
+.sinopsis {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #bbb;
+}
+
+/* --- NUEVO: Capítulos en formato "Lista Ancha" --- */
+.capitulos-lista { 
+    display: flex; 
+    flex-direction: column; /* Apila los botones verticalmente */
+    gap: 12px; 
+    max-width: 600px; 
+    margin: 0 auto 40px auto; 
+}
 
 .capitulo { 
+    width: 100%; /* Toma todo el ancho disponible */
     background: #121216; 
     border: 1px solid rgba(233, 30, 99, 0.4); 
     box-shadow: 0 0 10px rgba(233, 30, 99, 0.2);
     color: #ff4081; 
-    padding: 10px 20px; 
-    border-radius: 25px; 
+    padding: 15px 25px; 
+    border-radius: 8px; /* Bordes menos redondeados */
     cursor: pointer; 
     font-weight: bold;
+    font-size: 1.2rem;
+    text-align: left; /* Texto a la izquierda */
     transition: 0.3s; 
 }
+
 .capitulo.activo, .capitulo:hover { 
     background: #e91e63; 
     color: white; 
     border-color: #e91e63;
     box-shadow: 0 0 20px #e91e63;
+    transform: scale(1.02); /* Crece un poquito al pasar el mouse */
 }
 
 /* --- Footer (Botones de Comunidad con Colores Originales Solidos) --- */
@@ -203,7 +250,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     background: #121216; 
     border-top: 1px solid rgba(233, 30, 99, 0.4);
     box-shadow: 0 -4px 20px rgba(233, 30, 99, 0.2);
-    margin-top: 150px; /* <--- AQUÍ ESTÁ EL CAMBIO: empuja el footer mucho más abajo */
+    margin-top: 150px; 
 }
 .footer-comunidad h2 { color: #ffffff; text-shadow: 0 0 8px rgba(233, 30, 99, 0.5); }
 .footer-comunidad p { color: #aaa; margin: 10px 0 20px 0; }
