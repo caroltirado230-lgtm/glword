@@ -11,10 +11,13 @@ const playerSection = document.getElementById("playerSection");
 const grid = document.getElementById("gridSeries");
 
 // Menú
-menuBtn.addEventListener("click", () => menu.classList.toggle("mostrar-menu"));
+if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => menu.classList.toggle("mostrar-menu"));
+}
 
-// Lógica de Renderizado
+// Lógica de Renderizado CON IMÁGENES
 function renderizarSeries(lista = series) {
+    if (!grid) return;
     grid.innerHTML = "";
     lista.forEach(serie => {
         const card = document.createElement("div");
@@ -58,8 +61,10 @@ renderizarSeries();
 
 // Buscador
 const buscador = document.getElementById("buscador");
-buscador.addEventListener("input", (e) => {
-    const val = e.target.value.toLowerCase();
-    const filtradas = series.filter(s => s.titulo.toLowerCase().includes(val));
-    renderizarSeries(filtradas);
-});
+if (buscador) {
+    buscador.addEventListener("input", (e) => {
+        const val = e.target.value.toLowerCase();
+        const filtradas = series.filter(s => s.titulo.toLowerCase().includes(val));
+        renderizarSeries(filtradas);
+    });
+}
