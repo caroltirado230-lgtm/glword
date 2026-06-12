@@ -110,9 +110,15 @@ function abrirSerie(serie) {
                 btn.className = `capitulo ${i === 0 ? 'activo' : ''}`;
                 btn.innerText = cap.nombre;
                 btn.onclick = () => {
+                    // 1. Cambia el video en el reproductor
                     vCont.innerHTML = `<iframe src="${cap.url}" allowfullscreen></iframe>`;
+                    
+                    // 2. Cambia la barra activa visualmente
                     document.querySelectorAll(".capitulo").forEach(b => b.classList.remove("activo"));
                     btn.classList.add("activo");
+                    
+                    // 3. MÁGIA: Sube la pantalla suavemente y centra el reproductor de video
+                    vCont.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 };
                 caps.appendChild(btn);
             });
