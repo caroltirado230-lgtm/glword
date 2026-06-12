@@ -11,7 +11,7 @@ const series = [
         capitulos: [
             { nombre: "Capítulo 1", url: "https://www.bitchute.com/embed/omhOOMuqUsgL" }, 
             { nombre: "Capítulo 2", url: "https://www.bitchute.com/embed/TakE5P18BWDo" },
-            { nombre: "Capítulo 3", url: "https://link-del-video-aqui.com" }
+            { nombre: "Capítulo 3", url: "https://www.bitchute.com/embed/L5Mh3AfbceLX" }
         ] 
     },
     { 
@@ -21,7 +21,7 @@ const series = [
         pais: "Tailandia",
         episodios: "12",
         emision: "Nov 2022 - Feb 2023",
-        cadena: "Channel 3, iQiyi",
+        cadena: "Channel 3",
         sinopsis: "Mon, una joven recién graduada, empieza a trabajar en la empresa de su ídolo de la infancia, Sam. Sin embargo, al conocerla, descubre que es muy diferente a lo que imaginaba.",
         capitulos: [
             { nombre: "Capítulo 1", url: "https://link-del-video-aqui.com" },
