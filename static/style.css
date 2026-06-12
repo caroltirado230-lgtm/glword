@@ -157,7 +157,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     align-items: center; 
     justify-content: flex-start; 
     gap: 15px; 
-    color: #e91e63; /* Tu rosa neón característico */
+    color: #e91e63; 
     text-shadow: 0 0 10px rgba(233, 30, 99, 0.6); 
 }
 
@@ -172,7 +172,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-shadow: none; /* Quita el brillo del texto del botón */
+    text-shadow: none; 
 }
 
 /* Efecto Hover del Botón de Volver */
@@ -198,9 +198,9 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 /* --- Rediseño de .capitulos-grid para que actúe como Lista Vertical --- */
 .capitulos-grid { 
     display: flex; 
-    flex-direction: column; /* Apila los capítulos verticalmente */
+    flex-direction: column; 
     gap: 12px; 
-    max-width: 850px; /* Ajustado para que combine con el ancho del video e info */
+    max-width: 850px; 
     margin: 0 auto 30px auto; 
 }
 
@@ -231,7 +231,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 /* --- Detalles Técnicos y Sinopsis --- */
 .info-serie {
     max-width: 850px;
-    margin: 0 auto 30px auto; /* Ajustado el margen superior */
+    margin: 0 auto 30px auto; 
     text-align: left;
     color: #ddd;
 }
@@ -261,6 +261,14 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     line-height: 1.6;
     margin-bottom: 40px;
     color: #bbb;
+}
+
+/* --- Sección de Comentarios (Disqus) --- */
+.comentarios-seccion {
+    max-width: 850px;
+    margin: 60px auto 30px auto; /* Centrado y con buen espacio superior */
+    padding-top: 40px;
+    border-top: 1px solid rgba(233, 30, 99, 0.2); /* Separación sutil con tono rosa oscuro */
 }
 
 /* --- Footer --- */
