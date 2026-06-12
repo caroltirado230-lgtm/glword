@@ -2,6 +2,11 @@ const series = [
     { 
         titulo: "Chasing Love", 
         portada: "/static/chasing.jpeg", 
+        drama: "Chasing Love",
+        pais: "Tailandia",
+        episodios: "8",
+        emision: "2026",
+        cadena: "netflix",
         sinopsis: "Dos jóvenes se encuentran en un laboratorio y una historia de amor inesperada comienza a surgir entre ellas...",
         capitulos: [
             { nombre: "Capítulo 1", url: "https://www.bitchute.com/embed/omhOOMuqUsgL" }, 
@@ -23,7 +28,12 @@ const series = [
     },
     { 
         titulo: "Affair", 
-        portada: "/static/affair.jpg",
+        portada: "/static/affair.jpg", 
+        drama: "Affair",
+        pais: "Tailandia",
+        episodios: "8",
+        emision: "ago 30, 2024 - ?",
+        cadena: "iQiyi, One 31",
         sinopsis: "Soy Phleng. Nací con una vida perfecta, pero todo cambió muy rápidamente después de que mi familia quebró. La vida no era tan mala cuando tenía a mi amiga de la infancia, Wanwiwa, que creció a mi lado. Sin embargo, por alguna desafortunada razón tuve que marcharme. Más de una década después, el destino juega su papel y nos vuelve a unir.",
         capitulos: [
             { nombre: "EP1", url: "https://videa.hu/player?v=EVag5eqDesZPP0LZ" },
