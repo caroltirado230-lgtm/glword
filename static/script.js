@@ -10,7 +10,8 @@ const series = [
         sinopsis: "Dos jóvenes se encuentran en un laboratorio y una historia de amor inesperada comienza a surgir entre ellas...",
         capitulos: [
             { nombre: "Capítulo 1", url: "https://www.bitchute.com/embed/omhOOMuqUsgL" }, 
-            { nombre: "Capítulo 2", url: "https://www.bitchute.com/embed/TakE5P18BWDo" }
+            { nombre: "Capítulo 2", url: "https://www.bitchute.com/embed/TakE5P18BWDo" },
+            { nombre: "Capítulo 3", url: "https://link-del-video-aqui.com" }
         ] 
     },
     { 
@@ -23,7 +24,18 @@ const series = [
         cadena: "Channel 3, iQiyi",
         sinopsis: "Mon, una joven recién graduada, empieza a trabajar en la empresa de su ídolo de la infancia, Sam. Sin embargo, al conocerla, descubre que es muy diferente a lo que imaginaba.",
         capitulos: [
-            { nombre: "Capítulo 1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+            { nombre: "Capítulo 1", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 2", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 3", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 4", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 5", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 6", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 7", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 8", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 9", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 10", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 11", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 12 Final", url: "https://link-del-video-aqui.com" }
         ] 
     },
     { 
@@ -32,7 +44,7 @@ const series = [
         drama: "Affair",
         pais: "Tailandia",
         episodios: "8",
-        emision: "ago 30, 2024 - ?",
+        emision: "Ago 30, 2024 - Oct 18, 2024",
         cadena: "iQiyi, One 31",
         sinopsis: "Soy Phleng. Nací con una vida perfecta, pero todo cambió muy rápidamente después de que mi familia quebró. La vida no era tan mala cuando tenía a mi amiga de la infancia, Wanwiwa, que creció a mi lado. Sin embargo, por alguna desafortunada razón tuve que marcharme. Más de una década después, el destino juega su papel y nos vuelve a unir.",
         capitulos: [
@@ -44,6 +56,74 @@ const series = [
             { nombre: "EP6", url: "https://videa.hu/player?v=PRxxAkuCpVFzddwz" },
             { nombre: "EP7", url: "https://videa.hu/player?v=BOoFnLRf7dyp1MDu" },
             { nombre: "EP8 Final", url: "https://videa.hu/player?v=JWFzKWK0nJHzz5ym" }
+        ] 
+    },
+    { 
+        titulo: "The Secret of Us", 
+        portada: "/static/secret.jpg", 
+        drama: "The Secret of Us (Jai Sorn Ruk)",
+        pais: "Tailandia",
+        episodios: "8",
+        emision: "Jun 2024 - Ago 2024",
+        cadena: "Channel 3, Netflix",
+        sinopsis: "La doctora Fahlada se encuentra con el corazón roto tras el repentino abandono de su antiguo amor, Earn. Años después, el destino las vuelve a juntar cuando Earn se convierte en la nueva modelo del hospital donde trabaja Fahlada, reabriendo viejas heridas y secretos del pasado.",
+        capitulos: [
+            { nombre: "Capítulo 1", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 2", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 3", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 4", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 5", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 6", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 7", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 8 Final", url: "https://link-del-video-aqui.com" }
+        ] 
+    },
+    { 
+        titulo: "23.5", 
+        portada: "/static/235.jpg", 
+        drama: "23.5 Overall the World Tilts",
+        pais: "Tailandia",
+        episodios: "12",
+        emision: "Mar 2024 - May 2024",
+        cadena: "GMMTV, Netflix",
+        sinopsis: "Ongsa, una chica tímida y solitaria, se enamora a primera vista de Sun, la chica más popular de su nueva escuela. Para acercarse a ella, Ongsa decide escribirle usando el pseudónimo en línea 'Earth', pero las cosas se complican cuando Sun empieza a enamorarse perdidamente de este misterioso perfil sin saber quién está detrás.",
+        capitulos: [
+            { nombre: "Capítulo 1", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 2", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 3", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 4", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 5", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 6", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 7", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 8", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 9", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 10", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 11", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 12 Final", url: "https://link-del-video-aqui.com" }
+        ] 
+    },
+    { 
+        titulo: "Blank", 
+        portada: "/static/blank.jpg", 
+        drama: "Blank The Series",
+        pais: "Tailandia",
+        episodios: "12",
+        emision: "Mar 2024 - Jun 2024",
+        cadena: "NineStar Studios",
+        sinopsis: "Khun Nueng es una mujer glamorosa e independiente que creció bajo la estricta presión de su abuela, cerrando su corazón al amor. Todo cambia por completo cuando conoce a Aneung, una alegre chica mucho más joven que ella que entra a su vida sin previo aviso, desafiando todas sus barreras y diferencias de edad.",
+        capitulos: [
+            { nombre: "Capítulo 1", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 2", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 3", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 4", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 5", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 6", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 7", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 8", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 9", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 10", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 11", url: "https://link-del-video-aqui.com" },
+            { nombre: "Capítulo 12 Final", url: "https://link-del-video-aqui.com" }
         ] 
     }
 ];
@@ -110,14 +190,9 @@ function abrirSerie(serie) {
                 btn.className = `capitulo ${i === 0 ? 'activo' : ''}`;
                 btn.innerText = cap.nombre;
                 btn.onclick = () => {
-                    // 1. Cambia el video en el reproductor
                     vCont.innerHTML = `<iframe src="${cap.url}" allowfullscreen></iframe>`;
-                    
-                    // 2. Cambia la barra activa visualmente
                     document.querySelectorAll(".capitulo").forEach(b => b.classList.remove("activo"));
                     btn.classList.add("activo");
-                    
-                    // 3. MÁGIA: Sube la pantalla suavemente y centra el reproductor de video
                     vCont.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 };
                 caps.appendChild(btn);
@@ -133,7 +208,7 @@ function cerrarSerie() {
     if(playerSection) playerSection.style.display = "none";
     if(catalogoSection) catalogoSection.style.display = "block";
     const vCont = document.getElementById("videoContainer");
-    if(vCont) vCont.innerHTML = ""; // Limpiar video para que no siga sonando de fondo
+    if(vCont) vCont.innerHTML = ""; 
 }
 
 // Inicializar el catálogo al cargar la página
