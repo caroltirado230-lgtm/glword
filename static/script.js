@@ -24,18 +24,18 @@ const series = [
         cadena: "Channel 3",
         sinopsis: "Mon, una joven recién graduada, empieza a trabajar en la empresa de su ídolo de la infancia, Sam. Sin embargo, al conocerla, descubre que es muy diferente a lo que imaginaba.",
         capitulos: [
-            { nombre: "Capítulo 1", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 2", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 3", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 4", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 5", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 6", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 7", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 8", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 9", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 10", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 11", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 12 Final", url: "https://link-del-video-aqui.com" }
+            { nombre: "Capítulo 1", url: "https://ok.ru/videoembed/4252363655735" },
+            { nombre: "Capítulo 2", url: "https://ok.ru/videoembed/4273968777783" },
+            { nombre: "Capítulo 3", url: "https://ok.ru/videoembed/4303289649719" },
+            { nombre: "Capítulo 4", url: "https://ok.ru/videoembed/4334224280119" },
+            { nombre: "Capítulo 5", url: "https://ok.ru/videoembed/4356981852727" },
+            { nombre: "Capítulo 6", url: "https://ok.ru/videoembed/4390850398775" },
+            { nombre: "Capítulo 7", url: "https://ok.ru/videoembed/4444206139959" },
+            { nombre: "Capítulo 8", url: "https://ok.ru/videoembed/4467911887415" },
+            { nombre: "Capítulo 9", url: "https://ok.ru/videoembed/4487805733431" },
+            { nombre: "Capítulo 10", url: "https://ok.ru/videoembed/4510918511159" },
+            { nombre: "Capítulo 11", url: "https://ok.ru/videoembed/4533882915383" },
+            { nombre: "Capítulo 12 Final", url: "https://ok.ru/videoembed/4575211358775" }
         ] 
     },
     { 
