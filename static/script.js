@@ -21,7 +21,7 @@ const series = [
         episodios: "12",
         emision: "Nov 2022 - Feb 2023",
         cadena: "Channel 3, iQiyi",
-        sinopsis: "Mon, una joven recién graduada, empieza a trabajar en la empresa de su ídolo de la infancia, Sam. Sin embargo, al conocerla, descubre que es muy diferente a lo que imaginaba.",
+        sinopsis: "Mon, una joven recién graduada, empieza a trabajar en la empresa de su ídolo de la infancia, Sam.",
         capitulos: [
             { nombre: "Capítulo 1", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
         ] 
