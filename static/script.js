@@ -7,7 +7,7 @@ const series = [
         episodios: "8",
         emision: "2026",
         cadena: "netflix",
-        sinopsis: "Dos jóvenes se encuentran en un laboratorio y una historia de amor inesperada comienza a surgir entre ellas...",
+        sinopsis: "Sadanun, una investigadora gastronómica, tiene una noche de pasión con Piengrawin, quien rompe la condición de no tener vínculos emocionales. Resulta que Piengrawin es la hija del jefe de Sada, y comienza a perseguirla con insistencia. Ella incluso menciona los nombres que ha elegido para los futuros hijos de ambos: Ruean y Rai.",
         capitulos: [
             { nombre: "Capítulo 1", url: "https://www.bitchute.com/embed/omhOOMuqUsgL" }, 
             { nombre: "Capítulo 2", url: "https://www.bitchute.com/embed/TakE5P18BWDo" },
@@ -22,7 +22,7 @@ const series = [
         episodios: "12",
         emision: "Nov 2022 - Feb 2023",
         cadena: "Channel 3",
-        sinopsis: "Mon, una joven recién graduada, empieza a trabajar en la empresa de su ídolo de la infancia, Sam. Sin embargo, al conocerla, descubre que es muy diferente a lo que imaginaba.",
+        sinopsis: "Mon, una estudiante recién graduada de la universidad, admira mucho a Sam, M.L. Samanun Anuntrakul, la CEO de una gran empresa, quien además es descendiente de la realeza tailandesa, por lo que es llamada respetuosamente Khun. Mon decide entrar a trabajar en dicha empresa para estar más cerca de su ídolo, sin embargo, cuando vuelve a encontrarse con Sam, su imagen de ella se derrumba por completo, ya que no es como la muestran los medios.Mon y Sam no solo tienen personalidades diferentes; también son de distintas clases sociales y entre ambas hay una brecha de ocho años de edad.",
         capitulos: [
             { nombre: "Capítulo 1", url: "https://ok.ru/videoembed/4252363655735" },
             { nombre: "Capítulo 2", url: "https://ok.ru/videoembed/4273968777783" },
@@ -46,7 +46,7 @@ const series = [
         episodios: "8",
         emision: "Ago 30, 2024 - Oct 18, 2024",
         cadena: "iQiyi, One 31",
-        sinopsis: "Soy Phleng. Nací con una vida perfecta, pero todo cambió muy rápidamente después de que mi familia quebró. La vida no era tan mala cuando tenía a mi amiga de la infancia, Wanwiwa, que creció a mi lado. Sin embargo, por alguna desafortunada razón tuve que marcharme. Más de una década después, el destino juega su papel y nos vuelve a unir.",
+        sinopsis: "Siangphleng y Wan Wanwiwa crecieron en la misma casa pero en diferentes estatus. Phleng es hija del dueño de la casa mientras Wan trabaja en la casa. Aunque nunca quieren separarse, un día Wan le dice a Phleng que eventualmente tendrá que casarse. Phleng planea encontrar un buen hombre para Wan para que no esté sola; sin embargo, este plan le hace darse cuenta de sus propios sentimientos por Wan. Mientras su amor se fortalece, Phleng pierde a sus padres debido a un fracaso comercial y escapa, dejando solo una carta de amor para Wan. Cuando finalmente se reencuentran, Wan está comprometida.",
         capitulos: [
             { nombre: "EP1", url: "https://videa.hu/player?v=EVag5eqDesZPP0LZ" },
             { nombre: "EP2", url: "https://videa.hu/player?v=E2XXTlWOV5JScAdN" },
