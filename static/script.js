@@ -112,18 +112,18 @@ const series = [
         cadena: "NineStar Studios",
         sinopsis: "Khun Nueng es una mujer glamorosa e independiente que creció bajo la estricta presión de su abuela, cerrando su corazón al amor. Todo cambia por completo cuando conoce a Aneung, una alegre chica mucho más joven que ella que entra a su vida sin previo aviso, desafiando todas sus barreras y diferencias de edad.",
         capitulos: [
-            { nombre: "Capítulo 1", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 2", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 3", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 4", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 5", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 6", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 7", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 8", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 9", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 10", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 11", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 12 Final", url: "https://link-del-video-aqui.com" }
+            { nombre: "Capítulo 1", url: "https://ok.ru/videoembed/9237201423041" },
+            { nombre: "Capítulo 2", url: "https://ok.ru/videoembed/9237201291969" },
+            { nombre: "Capítulo 3", url: "https://ok.ru/videoembed/9237201226433" },
+            { nombre: "Capítulo 4", url: "https://ok.ru/videoembed/9237201095361" },
+            { nombre: "Capítulo 5", url: "https://ok.ru/videoembed/9237200964289" },
+            { nombre: "Capítulo 6", url: "https://ok.ru/videoembed/9237201160897" },
+            { nombre: "Capítulo 7", url: "https://ok.ru/videoembed/9237201357505" },
+            { nombre: "Capítulo 8", url: "https://ok.ru/videoembed/9238012431041" },
+            { nombre: "Capítulo 9", url: "https://ok.ru/videoembed/9237200833217" },
+            { nombre: "Capítulo 10", url: "https://ok.ru/videoembed/9237201029825" },
+            { nombre: "Capítulo 11", url: "https://ok.ru/videoembed/9237200767681" },
+            { nombre: "Capítulo 12 Final", url: "https://ok.ru/videoembed/9238013217473" }
         ] 
     }
 ];
