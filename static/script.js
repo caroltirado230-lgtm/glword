@@ -68,14 +68,14 @@ const series = [
         cadena: "Channel 3, Netflix",
         sinopsis: "La doctora Fahlada se encuentra con el corazón roto tras el repentino abandono de su antiguo amor, Earn. Años después, el destino las vuelve a juntar cuando Earn se convierte en la nueva modelo del hospital donde trabaja Fahlada, reabriendo viejas heridas y secretos del pasado.",
         capitulos: [
-            { nombre: "Capítulo 1", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 2", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 3", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 4", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 5", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 6", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 7", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 8 Final", url: "https://link-del-video-aqui.com" }
+            { nombre: "Capítulo 1", url: "https://ok.ru/videoembed/9261360351937" },
+            { nombre: "Capítulo 2", url: "https://ok.ru/videoembed/9261360417473" },
+            { nombre: "Capítulo 3", url: "https://ok.ru/videoembed/9261360286401" },
+            { nombre: "Capítulo 4", url: "https://ok.ru/videoembed/9261360548545" },
+            { nombre: "Capítulo 5", url: "https://ok.ru/videoembed/9261360679617" },
+            { nombre: "Capítulo 6", url: "https://ok.ru/videoembed/9261360483009" },
+            { nombre: "Capítulo 7", url: "https://ok.ru/videoembed/9261360810689" },
+            { nombre: "Capítulo 8 Final", url: "https://ok.ru/videoembed/9261360614081" }
         ] 
     },
     { 
