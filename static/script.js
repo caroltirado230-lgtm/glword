@@ -12,7 +12,7 @@ const series = [
     { nombre: "Capitulo 1", url: "https://www.bitchute.com/embed/omhOOMuqusgL" },
     { nombre: "Capitulo 2", url: "https://www.bitchute.com/embed/TakESP1SBWDo" },
     { nombre: "Capitulo 3", url: "https://www.bitchute.com/embed/LSMH3AfbceLX" },
-    { nombre: "Capitulo 4", url: "https://seed122.bitchute.com/FNWJhQHv4Do0/7DEXyaf9rIVz.mp4" }
+    { nombre: "Capitulo 4", url: "https://www.bitchute.com/embed/7DEXyaf9rIVz" }
         ]
     },
     { 
