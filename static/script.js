@@ -12,6 +12,8 @@ const series = [
             { nombre: "Capítulo 1", url: "https://www.bitchute.com/embed/omhOOMuqUsgL" }, 
             { nombre: "Capítulo 2", url: "https://www.bitchute.com/embed/TakE5P18BWDo" },
             { nombre: "Capítulo 3", url: "https://www.bitchute.com/embed/L5Mh3AfbceLX" }
+            { nombre: "Capítulo 4", url: "https://seed122.bitchute.com/FNWJhQHv4Do0/7DEXyaf9rIVz.mp4" }
+
         ] 
     },
     { 
