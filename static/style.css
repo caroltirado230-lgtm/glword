@@ -150,7 +150,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 
 /* Título de la Serie con color neón y alineado a la izquierda */
 #tituloSerie { 
-    max-width: 950px; /* Ajustado para laptops */
+    max-width: 1100px; 
     width: 100%;
     margin: 0 auto 25px auto;
     font-size: 1.8rem; 
@@ -184,13 +184,15 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     transform: scale(1.05);
 }
 
-/* AQUÍ ESTÁ LA MAGIA PARA EL VIDEO */
+/* AQUÍ ESTÁ EL AJUSTE PARA CENTRAR Y CREAR LAS FRANJAS NEGRAS */
 #videoContainer { 
-    position: relative; /* ESTO FALTABA: Clave para forzar el video */
-    max-width: 950px; /* Ajustado para laptops */
+    position: relative; 
     width: 100%; 
+    max-width: 1100px; 
+    height: 60vh; /* Reemplaza el aspect-ratio, usa el 60% de la altura de la ventana */
+    min-height: 400px; /* Límite mínimo para que no quede muy chico */
+    max-height: 550px; /* Límite máximo para que no se coma la pantalla */
     margin: 0 auto 30px auto; 
-    aspect-ratio: 16 / 9; 
     border-radius: 10px; 
     overflow: hidden; 
     background: #000; 
@@ -199,12 +201,13 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 }
 
 #videoContainer iframe { 
-    position: absolute; /* ESTO FALTABA: Obliga al iframe a cubrir la caja */
-    top: 0;
-    left: 0;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
     width: 100%; 
     height: 100%; 
     border: none; 
+    background: #000; /* Fuerza fondo negro dentro del iframe */
 }
 
 /* --- Rediseño de .capitulos-grid para que actúe como Lista Vertical --- */
@@ -212,7 +215,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     display: flex; 
     flex-direction: column; 
     gap: 12px; 
-    max-width: 950px; /* Alineado con el video */
+    max-width: 1100px; 
     width: 100%;
     margin: 0 auto 30px auto; 
 }
@@ -243,7 +246,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 
 /* --- Detalles Técnicos y Sinopsis --- */
 .info-serie {
-    max-width: 950px; /* Alineado con el video */
+    max-width: 1100px; 
     width: 100%;
     margin: 0 auto 30px auto; 
     text-align: left;
@@ -260,60 +263,4 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
-.metadata li {
-    margin-bottom: 10px;
-    font-size: 1.05rem;
-}
-
-.metadata li strong {
-    color: #e91e63;
-    text-shadow: 0 0 5px rgba(233, 30, 99, 0.3);
-}
-
-.sinopsis {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 40px;
-    color: #bbb;
-}
-
-/* --- Sección de Comentarios (Disqus) --- */
-.comentarios-seccion {
-    max-width: 950px; /* Alineado con el video */
-    width: 100%;
-    margin: 60px auto 30px auto; 
-    padding-top: 40px;
-    border-top: 1px solid rgba(233, 30, 99, 0.2); 
-}
-
-/* --- Footer --- */
-.footer-comunidad { 
-    text-align: center; 
-    padding: 50px 20px; 
-    background: #121216; 
-    border-top: 1px solid rgba(233, 30, 99, 0.4);
-    box-shadow: 0 -4px 20px rgba(233, 30, 99, 0.2);
-    margin-top: 150px; 
-}
-.footer-comunidad h2 { color: #ffffff; text-shadow: 0 0 8px rgba(233, 30, 99, 0.5); }
-.footer-comunidad p { color: #aaa; margin: 10px 0 20px 0; }
-.botones-comunidad { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-.btn-comunidad { padding: 12px 25px; border-radius: 25px; text-decoration: none; color: white; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s;}
-
-.telegram { 
-    background-color: #229ED9; 
-    border: none; 
-    color: #ffffff; 
-    box-shadow: 0 4px 15px rgba(34, 158, 217, 0.4); 
-}
-.telegram:hover { background-color: #1b85b8; box-shadow: 0 0 25px #229ED9; }
-
-.donacion { 
-    background-color: #e91e63; 
-    border: none; 
-    color: #ffffff; 
-    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4); 
-}
-.donacion:hover { background-color: #c2185b; box-shadow: 0 0 25px #e91e63; }
-
-.credits { margin-top: 30px !important; font-size: 0.85rem; color: #666 !important; }
+.
