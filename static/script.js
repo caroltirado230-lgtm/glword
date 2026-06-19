@@ -88,18 +88,18 @@ const series = [
         cadena: "GMMTV, Netflix",
         sinopsis: "Ongsa, una chica tímida y solitaria, se enamora a primera vista de Sun, la chica más popular de su nueva escuela. Para acercarse a ella, Ongsa decide escribirle usando el pseudónimo en línea 'Earth', pero las cosas se complican cuando Sun empieza a enamorarse perdidamente de este misterioso perfil sin saber quién está detrás.",
         capitulos: [
-            { nombre: "Capítulo 1", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 2", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 3", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 4", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 5", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 6", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 7", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 8", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 9", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 10", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 11", url: "https://link-del-video-aqui.com" },
-            { nombre: "Capítulo 12 Final", url: "https://link-del-video-aqui.com" }
+            { nombre: "Capítulo 1", url: "https://ok.ru/videoembed/7085013797449" },
+            { nombre: "Capítulo 2", url: "https://ok.ru/videoembed/7127302998601" },
+            { nombre: "Capítulo 3", url: "https://ok.ru/videoembed/7127298935369" },
+            { nombre: "Capítulo 4", url: "https://ok.ru/videoembed/7143403358793" },
+            { nombre: "Capítulo 5", url: "https://ok.ru/videoembed/7161297046089" },
+            { nombre: "Capítulo 6", url: "https://ok.ru/videoembed/7181412076105" },
+            { nombre: "Capítulo 7", url: "https://ok.ru/videoembed/7201053477449" },
+            { nombre: "Capítulo 8", url: "https://ok.ru/videoembed/7221642660425" },
+            { nombre: "Capítulo 9", url: "https://ok.ru/videoembed/7245890062921" },
+            { nombre: "Capítulo 10", url: "https://ok.ru/videoembed/7271468239433" },
+            { nombre: "Capítulo 11", url: "https://ok.ru/videoembed/7288983652937" },
+            { nombre: "Capítulo 12 Final", url: "https://ok.ru/videoembed/7340329863753" }
         ] 
     },
     { 
