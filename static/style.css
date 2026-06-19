@@ -150,7 +150,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 
 /* Título de la Serie con color neón y alineado a la izquierda */
 #tituloSerie { 
-    max-width: 1100px; /* AUMENTADO PARA QUE SE VEA MÁS ANCHO */
+    max-width: 950px; /* Ajustado para laptops */
     width: 100%;
     margin: 0 auto 25px auto;
     font-size: 1.8rem; 
@@ -184,9 +184,11 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     transform: scale(1.05);
 }
 
+/* AQUÍ ESTÁ LA MAGIA PARA EL VIDEO */
 #videoContainer { 
-    max-width: 1100px; /* AUMENTADO PARA QUE EL VIDEO SE EXPANDA */
-    width: 100%; /* ASEGURA QUE TOME TODO EL ANCHO PERMITIDO */
+    position: relative; /* ESTO FALTABA: Clave para forzar el video */
+    max-width: 950px; /* Ajustado para laptops */
+    width: 100%; 
     margin: 0 auto 30px auto; 
     aspect-ratio: 16 / 9; 
     border-radius: 10px; 
@@ -195,14 +197,22 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
     border: 1px solid rgba(233, 30, 99, 0.4);
     box-shadow: 0 0 25px rgba(233, 30, 99, 0.4); 
 }
-#videoContainer iframe { width: 100%; height: 100%; border: none; }
+
+#videoContainer iframe { 
+    position: absolute; /* ESTO FALTABA: Obliga al iframe a cubrir la caja */
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+}
 
 /* --- Rediseño de .capitulos-grid para que actúe como Lista Vertical --- */
 .capitulos-grid { 
     display: flex; 
     flex-direction: column; 
     gap: 12px; 
-    max-width: 1100px; /* AUMENTADO PARA ALINEAR CON EL VIDEO */
+    max-width: 950px; /* Alineado con el video */
     width: 100%;
     margin: 0 auto 30px auto; 
 }
@@ -233,7 +243,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 
 /* --- Detalles Técnicos y Sinopsis --- */
 .info-serie {
-    max-width: 1100px; /* AUMENTADO PARA ALINEAR CON EL VIDEO */
+    max-width: 950px; /* Alineado con el video */
     width: 100%;
     margin: 0 auto 30px auto; 
     text-align: left;
@@ -269,7 +279,7 @@ nav a:hover { background: rgba(233, 30, 99, 0.2); box-shadow: 0 0 10px rgba(233,
 
 /* --- Sección de Comentarios (Disqus) --- */
 .comentarios-seccion {
-    max-width: 1100px; /* AUMENTADO PARA ALINEAR CON EL VIDEO */
+    max-width: 950px; /* Alineado con el video */
     width: 100%;
     margin: 60px auto 30px auto; 
     padding-top: 40px;
