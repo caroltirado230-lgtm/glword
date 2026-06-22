@@ -1,5 +1,6 @@
 [
     {
+        "tipo": "serie",
         "titulo": "Chasing Love",
         "portada": "/static/chasing.jpeg",
         "drama": "Chasing Love",
@@ -17,6 +18,7 @@
         ]
     },
     {
+        "tipo": "serie",
         "titulo": "GAP",
         "portada": "/static/gap.jpg",
         "drama": "GAP The Series",
@@ -42,6 +44,7 @@
         ]
     },
     {
+        "tipo": "serie",
         "titulo": "Affair",
         "portada": "/static/affair.jpg",
         "drama": "Affair",
@@ -63,6 +66,7 @@
         ]
     },
     {
+        "tipo": "serie",
         "titulo": "The Secret of Us",
         "portada": "/static/secret.jpg",
         "drama": "The Secret of Us (Jai Sorn Ruk)",
@@ -84,6 +88,7 @@
         ]
     },
     {
+        "tipo": "serie",
         "titulo": "23.5",
         "portada": "/static/235.jpg",
         "drama": "23.5 Overall the World Tilts",
@@ -109,6 +114,7 @@
         ]
     },
     {
+        "tipo": "serie",
         "titulo": "Blank",
         "portada": "/static/blank.jpg",
         "drama": "Blank The Series",
