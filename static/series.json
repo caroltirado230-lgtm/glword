@@ -1,6 +1,7 @@
 [
     {
         "titulo": "Chasing Love",
+        "categoria": "series",
         "portada": "/static/chasing.jpeg",
         "descripcion": "Serie GL",
         "capitulos": [
