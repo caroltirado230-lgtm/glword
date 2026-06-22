@@ -1,14 +1,13 @@
 [
-    {
-        "titulo": "Chasing Love",
-        "categoria": "series",
-        "portada": "/static/chasing.jpeg",
-        "descripcion": "Serie GL",
-        "capitulos": [
-            {
-                "nombre": "Capítulo 1",
-                "url": "https://www.bitchute.com/embed/omhOOMuqUsgL"
-            }
-        ]
-    }
+    {
+        "titulo": "Chasing Love",
+        "portada": "/static/chasing.jpeg",
+        "descripcion": "Serie GL",
+        "capitulos": [
+            {
+                "nombre": "Capítulo 1",
+                "url": "https://www.bitchute.com/embed/omhOOMuqUsgL"
+            }
+        ]
+    }
 ]
