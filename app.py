@@ -34,36 +34,44 @@ def admin():
 def get_series():
     return jsonify(leer_series())
 
-# La ruta invisible que procesa el formulario
-@app.route("/agregar_serie", methods=["POST"])
-def agregar_serie():
+# La ruta mejorada que procesa el formulario
+@app.route("/agregar_contenido", methods=["POST"])
+def agregar_contenido():
+    tipo = request.form.get("tipo")
     titulo = request.form.get("titulo")
     portada = request.form.get("portada")
     nombre_capitulo = request.form.get("nombre_capitulo")
     url_video = request.form.get("url_video")
 
-    series = leer_series()
+    contenidos = leer_series()
 
-    # Busca si la serie ya existe (ignorando mayúsculas/minúsculas)
-    serie_existente = next((s for s in series if s["titulo"].lower() == titulo.lower()), None)
+    # Busca si el contenido ya existe (ignorando mayúsculas/minúsculas)
+    contenido_existente = next((c for c in contenidos if c["titulo"].lower() == titulo.lower()), None)
 
     nuevo_capitulo = {"nombre": nombre_capitulo, "url": url_video}
 
-    if serie_existente:
-        # Si la serie ya existe, solo le agregamos el nuevo capítulo
-        serie_existente["capitulos"].append(nuevo_capitulo)
+    if contenido_existente:
+        # Si ya existe, solo le agregamos el nuevo capítulo/película
+        contenido_existente["capitulos"].append(nuevo_capitulo)
     else:
-        # Si es nueva, armamos su ficha completa
-        nueva_serie = {
+        # Si es nuevo, armamos su ficha completa
+        nuevo_contenido = {
+            "tipo": tipo,
             "titulo": titulo,
             "portada": portada,
-            "descripcion": "Serie GL",
+            "descripcion": "Película GL" if tipo == "pelicula" else "Serie GL",
+            "drama": titulo,
+            "pais": "Tailandia",
+            "episodios": "1" if tipo == "pelicula" else "?",
+            "emision": "2026",
+            "cadena": "Glword",
+            "sinopsis": "Contenido GL",
             "capitulos": [nuevo_capitulo]
         }
-        series.append(nueva_serie)
+        contenidos.append(nuevo_contenido)
 
     # Guardamos los cambios
-    guardar_series(series)
+    guardar_series(contenidos)
     
     # Te devuelve al panel para que puedas seguir subiendo
     return redirect(url_for("admin"))
