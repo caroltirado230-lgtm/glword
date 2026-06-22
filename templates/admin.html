@@ -1,53 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Control - Glword</title>
-    <style>
-        body { background: #0f0f12; color: white; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .admin-box { background: #18181d; padding: 40px; border-radius: 12px; border: 2px solid #e91e63; box-shadow: 0px 4px 20px rgba(233, 30, 99, 0.3); width: 100%; max-width: 400px; }
-        h2 { text-align: center; color: #e91e63; margin-bottom: 25px; }
-        
-        /* Ajuste: Ahora aplicamos estilos a input Y select */
-        input, select { 
-            width: 100%; 
-            padding: 12px; 
-            margin-bottom: 15px; 
-            border-radius: 6px; 
-            border: 1px solid #333; 
-            background: #222; 
-            color: white; 
-            box-sizing: border-box; 
-        }
-        
-        button { width: 100%; background: #e91e63; color: white; border: none; padding: 15px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        button:hover { background: #c2185b; }
-        .volver { display: block; text-align: center; margin-top: 15px; color: #aaa; text-decoration: none; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Glword</title>
+    <style>
+        body { background: #0f0f12; color: white; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .admin-box { background: #18181d; padding: 40px; border-radius: 12px; border: 2px solid #e91e63; box-shadow: 0px 4px 20px rgba(233, 30, 99, 0.3); width: 100%; max-width: 400px; }
+        h2 { text-align: center; color: #e91e63; margin-bottom: 25px; }
+        input { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #333; background: #222; color: white; box-sizing: border-box; }
+        button { width: 100%; background: #e91e63; color: white; border: none; padding: 15px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #c2185b; }
+        .volver { display: block; text-align: center; margin-top: 15px; color: #aaa; text-decoration: none; }
+    </style>
 </head>
 <body>
 
-    <div class="admin-box">
-        <h2>Subir Contenido</h2>
-        <form action="/agregar_serie" method="POST">
-            
-            <select name="categoria" required>
-                <option value="" disabled selected>Selecciona la categoría</option>
-                <option value="series">Serie GL</option>
-                <option value="peliculas">Película GL</option>
-                <option value="cortos">Corto GL</option>
-            </select>
-
-            <input type="text" name="titulo" placeholder="Título (Ej: GAP)" required>
-            <input type="text" name="portada" placeholder="Link de la imagen de portada" required>
-            <input type="text" name="nombre_capitulo" placeholder="Nombre (Ej: Capítulo 1)" required>
-            <input type="url" name="url_video" placeholder="Link del video (YouTube, Bitchute, etc)" required>
-            
-            <button type="submit">Guardar y Publicar</button>
-        </form>
-        <a href="/" class="volver">Volver a la página principal</a>
-    </div>
+    <div class="admin-box">
+        <h2>Subir Capítulo</h2>
+        <form action="/agregar_serie" method="POST">
+            <input type="text" name="titulo" placeholder="Título de la Serie (Ej: GAP)" required>
+            <input type="text" name="portada" placeholder="Link de la imagen de portada" required>
+            <input type="text" name="nombre_capitulo" placeholder="Nombre (Ej: Capítulo 1)" required>
+            <input type="url" name="url_video" placeholder="Link del video (YouTube, Bitchute, etc)" required>
+            
+            <button type="submit">Guardar y Publicar</button>
+        </form>
+        <a href="/" class="volver">Volver a la página principal</a>
+    </div>
 
 </body>
 </html>
