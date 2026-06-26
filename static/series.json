@@ -142,15 +142,15 @@
     },
     {
         "tipo": "pelicula",
-        "titulo": "Uranus",
-        "portada": "https://via.placeholder.com/300x400?text=Uranus",
-        "drama": "Uranus",
+        "titulo": "Uranus 2324",
+        "portada": "/static/blank.jpg",
+",
+        "drama": "Uranus 2324",
         "pais": "Tailandia",
-        "episodios": "1",
-        "emision": "2026",
-        "cadena": "Glword",
-        "sinopsis": "Una película GL que explora los misterios del amor intergaláctico.",
-        "descripcion": "Película GL",
+        "emision": "04 de julio 2024",
+        "cadena": "Velcurve Studio",
+        "sinopsis": "Amor y despedida se entrelazan en la historia de dos almas, Kath y Lin, destinadas a estar separadas. Mientras Kath desciende a las profundidades del océano, Lin se enfrenta a una tormenta solar en la inmensidad del espacio. Sus luchas son inmensas, pero las unen en el multiverso. A pesar de sus encuentros, la felicidad les es esquiva. Cada mundo que encuentran presenta nuevas barreras, que conducen a la separación, la pérdida y el desamor. Continuamente heridas por el destino, se enfrentan al reto de superar su separación predestinada. ¿Podrán desafiar al destino, encontrar el amor verdadero y vivir felices juntas?",
+        "genero": "romance, fantasia, ciencia ficcio, gl",
         "capitulos": [
             {"nombre": "Película Completa", "url": "https://ok.ru/videoembed/placeholder123456"}
         ]
