@@ -143,8 +143,7 @@
     {
         "tipo": "pelicula",
         "titulo": "Uranus 2324",
-        "portada": "/static/blank.jpg",
-",
+        "portada": "/static/uranus.jpg",
         "drama": "Uranus 2324",
         "pais": "Tailandia",
         "emision": "04 de julio 2024",
